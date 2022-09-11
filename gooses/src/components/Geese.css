@@ -1,0 +1,69 @@
+body {
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.containerBlack {
+    position: relative;
+    text-align: centre;
+    color: black;
+    height: 800px;
+    
+}
+
+.containerBlackFill {
+    text-align: centre;
+    color: black;
+    height: 900px;
+}
+
+.backImg {
+    width: 100%;
+    box-shadow: 0 0 8px 8px black inset;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+.centreRight {
+    position:absolute;
+    top: 40%;
+    left: 75%;
+    color: white;
+}
+
+.list {
+    position: sticky;
+    font-size:x-large;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.fill {
+    background-color: black;
+}
+
+.mintBtn {
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 20px;
+    color: white;
+}
+
+.mintBtn .btn {
+    margin: 6px;
+}

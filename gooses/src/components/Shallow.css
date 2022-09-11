@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+
+    background-image: url("../../public/media/images/character0.png");
+    background-size: 45px 142px;
+    background-repeat: repeat;
+
+    color: white;
+}
+
+#img {
+    position:absolute;
+    margin-top: 632px;
+    margin-left: 450px;
+    opacity: 0.2;
+}
+
+#img:hover {
+    opacity: 1;
+    transition: 0.2s;
+}
+
