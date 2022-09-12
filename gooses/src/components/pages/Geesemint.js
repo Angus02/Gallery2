@@ -14,7 +14,7 @@ function Geesemint() {
                         <div className='centered' >
 
                             <Button buttonStyle='btn--outline' buttonSize={'btn--large'}>
-                                    <span>Mint</span>
+                                    <span>Coming Soon</span>
                             </Button>
 
                             </div>
