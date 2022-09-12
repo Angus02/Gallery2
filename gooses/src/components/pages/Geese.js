@@ -22,40 +22,34 @@ function Geese() {
 
 
           <img className='backImg' src='media/images/geese2.png' alt='goo' />
-          <div className='centered' >Centered</div>
-          <div className='centreRight'>
-            <div className='list' >Centre Right1</div>
-            <div className='list' >Centre Right2</div>
-            <div className='list' >Centre Right3</div>
-            <div className='list' >Centre Right4</div>
-          </div>
+          <div className='centered' >Become part of the Geese</div>
       </div>
       <div className='containerBlack'>
-          <div className='centered' >Centered</div>
+          <div className='centered' >As a Member</div>
           <div className='centreRight'>
-            <div className='list' >Centre Right1</div>
-            <div className='list' >Centre Right2</div>
-            <div className='list' >Centre Right3</div>
-            <div className='list' >Centre Right4</div>
+            <div className='list' ></div>
+            <div className='list' ></div>
+            <div className='list' ></div>
+            <div className='list' ></div>
           </div>
       </div>
       <div className='container'>
           <img className='backImg' src='media/images/geese2.png' alt='goo' />
-          <div className='centered' >Centered</div>
+          <div className='centered' >As an Owner</div>
           <div className='centreRight'>
-            <div className='list' >Centre Right1</div>
-            <div className='list' >Centre Right2</div>
-            <div className='list' >Centre Right3</div>
-            <div className='list' >Centre Right4</div>
+            <div className='list' ></div>
+            <div className='list' ></div>
+            <div className='list' ></div>
+            <div className='list' ></div>
           </div>
       </div>
       <div className='containerBlack'>
-          <div className='centered' >Centered</div>
+          <div className='centered' >Part of the Future</div>
           <div className='centreRight'>
-            <div className='list' >Centre Right1</div>
-            <div className='list' >Centre Right2</div>
-            <div className='list' >Centre Right3</div>
-            <div className='list' >Centre Right4</div>
+            <div className='list' ></div>
+            <div className='list' ></div>
+            <div className='list' ></div>
+            <div className='list' ></div>
           </div>
       </div>
     </div>
