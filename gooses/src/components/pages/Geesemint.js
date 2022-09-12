@@ -19,10 +19,10 @@ function Geesemint() {
 
                             </div>
                         <div className='centreRight'>
-                            <div className='list' >Centre Right1</div>
-                            <div className='list' >Centre Right2</div>
-                            <div className='list' >Centre Right3</div>
-                            <div className='list' >Centre Right4</div>
+                            <div className='list' ></div>
+                            <div className='list' ></div>
+                            <div className='list' ></div>
+                            <div className='list' ></div>
                         </div>
                     </div>
                 </div>
