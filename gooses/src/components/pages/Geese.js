@@ -14,9 +14,9 @@ function Geese() {
 
       <div className='container'>
 
-      <a href='/geesemint' className='mintBtn'>
+      <a href='/#/geesemint' className='mintBtn'>
         <Button buttonStyle='btn--outline' >
-          Mint Geese
+          Coming Soon
         </Button>
       </a>
 
