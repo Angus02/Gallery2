@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './components/NavBar';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {HashRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home'
 import Geese from './components/pages/Geese'
@@ -19,6 +19,12 @@ function App() {
           <Route path='/geesemint' element={<Geesemint />} />
         </Routes>
       </Router>
+{/* 
+      <Router>
+        <NavBar />
+        <Route path='/' element= {<Home />} />
+        <Route path='/geese' element= {<Geese />} />
+      </Router> */}
     </>
   );
 }

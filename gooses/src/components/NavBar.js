@@ -78,12 +78,12 @@ function NavBar()
                     </a>
                     <ul className='nav-menu'>
                         <li className='nav-item'>
-                            <a href='/geese' className='nav-links'>
+                            <a href='/#/geese' className='nav-links'>
                                 Geese
                             </a>
                         </li>
                         <li className='nav-item'>
-                            <a href='/shallow' className='nav-links'>
+                            <a href='/#/shallow' className='nav-links'>
                                 Shallow
                             </a>
                         </li>
