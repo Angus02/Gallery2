@@ -21,10 +21,9 @@
   .navbar-logo {
     color: #fff;
     justify-self: start;
-    margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 2vw;
     display: flex;
     align-items: center;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -74,6 +73,20 @@
   }
   
   @media screen and (max-width: 760px) {
+
+    .navbar-logo2 {
+      color: #fff;
+      justify-self: start;
+      cursor: pointer;
+      text-decoration: none;
+      font-size: 2vw;
+      display: flex;
+      align-items: center;
+      align-self: center;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+
     .NavbarItems {
       position: relative;
     }
@@ -130,6 +143,6 @@
   
     .fa-times {
       color: #fff;
-      font-size: 2rem;
+      font-size: 2vw;
     }
 }
