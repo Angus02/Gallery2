@@ -16,7 +16,6 @@ html {
     position: relative;
     text-align: centre;
     color: black;
-    height: 800px;
     
 }
 
@@ -28,7 +27,6 @@ html {
 
 .backImg {
     width: 100%;
-    box-shadow: 0 0 8px 8px black inset;
 }
 
 .centered {
