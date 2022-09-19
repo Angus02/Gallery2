@@ -6,6 +6,7 @@ import Home from './components/pages/Home'
 import Geese from './components/pages/Geese'
 import Shallow from './components/pages/Shallow'
 import Geesemint from './components/pages/Geesemint';
+import ComingSoon from './components/pages/ComingSoon';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/geese' element= {<Geese />} />
           <Route path='/shallow' element={<Shallow />} />
           <Route path='/geesemint' element={<Geesemint />} />
+          <Route path='/comingsoon' element={<ComingSoon />} />
         </Routes>
       </Router>
 {/* 

@@ -9,7 +9,7 @@ function Shallow() {
 
   return (
     <>
-      <a href='/#/geesemint'>
+      <a href='/#/comingsoon'>
         <img id="img" src='media/images/character1.png' alt='dog' width="45" height="142" />
       </a>
     </>

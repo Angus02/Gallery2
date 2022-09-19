@@ -68,6 +68,15 @@ function NavBar()
 
     window.addEventListener('resize', showButton);
 
+    function Install() {
+      if(typeof window.ethereum !== 'undefined') {
+        return "Connect Wallet"
+      } else {
+        return "Install MetaMask"
+      }
+    }
+
+
 
     return (
         <>
@@ -96,7 +105,7 @@ function NavBar()
                                 "..." +
                                 String(walletAddress).substring(38)
                                 ) : (
-                                <span>Connect Wallet</span>
+                                  Install()
                     )}</Button>}
                 </div>
             </nav>
