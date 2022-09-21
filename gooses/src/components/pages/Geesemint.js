@@ -1,5 +1,4 @@
 import {React} from 'react'
-import {ethers} from 'ethers'
 import '../Geese.css'
 import { Button } from '../Button'
 import Geese from './Geese'
