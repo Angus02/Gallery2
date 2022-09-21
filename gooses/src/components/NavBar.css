@@ -67,6 +67,11 @@
     color: #fff;
   }
 
+  .installLink {
+    color: #fff;
+    text-decoration: none;
+  }
+
   
   .menu-icon {
     display: none;

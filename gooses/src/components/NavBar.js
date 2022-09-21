@@ -72,7 +72,9 @@ function NavBar()
       if(typeof window.ethereum !== 'undefined') {
         return "Connect Wallet"
       } else {
-        return "Install MetaMask"
+        return (
+          <a className='installLink' href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'>"Install MetaMask"</a>
+        )
       }
     }
 
