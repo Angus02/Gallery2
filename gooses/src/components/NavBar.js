@@ -73,7 +73,7 @@ function NavBar()
         return "Connect Wallet"
       } else {
         return (
-          <a className='installLink' href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'>"Install MetaMask"</a>
+          <a className='installLink' href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'>Install MetaMask</a>
         )
       }
     }
