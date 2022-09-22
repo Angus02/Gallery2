@@ -1,9 +1,10 @@
 import {React} from 'react'
 import '../Geese.css'
 import { Button } from '../Button'
+import Geese from './Geese'
 
 
-function ComingSoon() {
+function Geesemint() {
     
     return (
         <div className='fill'>
@@ -30,4 +31,4 @@ function ComingSoon() {
     );
 }
 
-export default ComingSoon;
+export default Geesemint;
