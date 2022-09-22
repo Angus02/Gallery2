@@ -52,7 +52,7 @@ contract Geese is ERC721, ERC721URIStorage, Ownable {
         require(existingURIs[metadataURI] != 1, 'NFT already minted!');
         require(msg.value >= 0.5 ether, 'Need to pay up!');
 
-        unit256 newItemId = _tokenIdCounter.current();
+        uint256 newItemId = _tokenIdCounter.current();
         _tokenIdCounter.increment();
         existingURIs[metadataURI] = 1;
 
