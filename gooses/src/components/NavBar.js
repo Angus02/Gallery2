@@ -5,6 +5,7 @@ import {
     connectWallet,
     getCurrentWalletConnected 
 } from "../utils/interact";
+import '../App.css'
 
 
 
@@ -100,7 +101,7 @@ function NavBar()
                         </li>
 
                     </ul>
-                    {button && <Button buttonStyle='btn--outline' onClick={connectWalletPressed}>
+                    {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
                                 {walletAddress.length > 0 ? (
                                 "Connected: " +
                                 String(walletAddress).substring(0, 4) +

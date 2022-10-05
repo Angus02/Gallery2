@@ -5,11 +5,12 @@ import {
 } from "../utils/interact";
 
 
+
 const Canvas = props => {
   
   const canvasRef = useRef(null)
   const colours = ['white', 'blue', 'red', 'yellow', 'green', 'purple', 'grey' , 'white', 'navy', 'black'];
-  const row = [50, 150, 250, 350, 450];
+  const row = [77, 142, 209, 275, 340, 406];
   const [walletAddress, setWallet] = useState("");
 
   useEffect(async () => { //TODO: implement
@@ -21,21 +22,23 @@ const Canvas = props => {
   const draw = (ctx, colour, posX, posY) => {
     ctx.fillStyle = colour
     ctx.beginPath()
-    ctx.arc(posX, posY, 20, 0, 2*Math.PI)
+    ctx.arc(posX + 5, posY + 10, 10, 0, 2*Math.PI)
 
     ctx.fill()
   }
 
 
   function DImage(ctx) {
-    const img = new Image();
-    img.src = '../../public/media/images/render3.png';
+    ctx.fillStyle = '#F8F0E3'
+    ctx.beginPath()
+    ctx.fillRect(0, 0, 500, 500)
 
-    img.onload = () => {
-      ctx.drawImage(img, 50, 38, 50, 38);
-    };
+    ctx.fill()
+
+    // var image = new Image()
+    // image.src = "gooses\public\media\images\render3.png"
+    // ctx.drawImage(image, 0, 0)
   }
-  
   
 
   let x = 0
@@ -44,9 +47,11 @@ const Canvas = props => {
 
   const grid = ctx => {
 
-    for(y = 0; y < 5; y++)
+    DImage(ctx)
+
+    for(y = 0; y < 6; y++)
     {
-      for(x = 0; x < 5; x++)
+      for(x = 0; x < 6; x++)
       {
         a += 1;
         draw(ctx, colours[String(walletAddress)[a]], row[x], row[y])
@@ -60,12 +65,16 @@ const Canvas = props => {
     const context = canvas.getContext('2d')
     
     //Our draw come here
-    DImage(context);
 
     grid(context)
   }, [grid])
   
-  return <canvas ref={canvasRef} {...props}/>
+  return (
+    <>
+   <canvas ref={canvasRef} {...props}/>
+  <h5>{String(walletAddress)}</h5>
+  </>
+  )
 }
 
 export default Canvas
