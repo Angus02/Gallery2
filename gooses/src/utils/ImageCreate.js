@@ -28,6 +28,7 @@ const Canvas = props => {
   }
 
 
+
   function DImage(ctx) {
     ctx.fillStyle = '#F8F0E3'
     ctx.beginPath()
@@ -35,9 +36,8 @@ const Canvas = props => {
 
     ctx.fill()
 
-    // var image = new Image()
-    // image.src = "gooses\public\media\images\render3.png"
-    // ctx.drawImage(image, 0, 0)
+    // ctx.drawImage(img, 0, 0)
+      
   }
   
 
@@ -47,7 +47,8 @@ const Canvas = props => {
 
   const grid = ctx => {
 
-    DImage(ctx)
+      DImage(ctx)
+    
 
     for(y = 0; y < 6; y++)
     {

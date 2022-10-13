@@ -85,8 +85,8 @@ function NavBar()
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <a href="/" className="navbar-logo" >
-                      <img className="navbar-logo2" src='media/images/goose3.png' alt='goo' width={70}/>
+                    <a href="/" className="navbar-logo2" >
+                      <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
                     </a>
                     <ul className='nav-menu'>
                         <li className='nav-item'>

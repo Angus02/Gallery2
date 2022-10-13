@@ -16,13 +16,13 @@ function Geese() {
 
       <a href='/#/geesemint' className='mintBtn'>
         <Button buttonStyle='btn--outline' >
-          Coming Soon
+          Create your Piece
         </Button>
       </a>
 
 
           <img className='backImg' src='media/images/geese2.png' alt='goo' />
-          <div className='centered' >Become part of the Geese</div>
+          <div className='centered' >Become one of the Geese</div>
       </div>
       <div className='containerBlack'>
         <img className='backImg' src='media/images/GooseRight.png' alt='goo' />
@@ -36,7 +36,7 @@ function Geese() {
       </div>
       <div className='container'>
           <img className='backImg' src='media/images/GooseLeftCentre.png' alt='goo' />
-          <div className='centered' >As an Owner</div>
+          <div className='centered' >Unique Art with a Key</div>
           <div className='centreRight'>
             <div className='list' ></div>
             <div className='list' ></div>

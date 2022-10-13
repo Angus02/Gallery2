@@ -26,7 +26,9 @@ body {
 
 .btn--medium {
     padding: 8px 20px;
-    font-size: 1vw;
+    font-size: clamp(16px, 4vm, 22px);
+    max-width: 200px;
+    max-height: 50px;
 }
 
 .btn--large {
