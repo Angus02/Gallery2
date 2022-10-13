@@ -42,7 +42,9 @@ const Canvas = props => {
 
   function Imag(ctx) {
     var img = document.getElementById("BckImg");
-    ctx.drawImage(img, 0, 0, 500, 500);
+    img.onload = function () {
+      ctx.drawImage(img, 0, 0, 500, 500);
+    }
   }
 
   
