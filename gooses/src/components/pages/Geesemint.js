@@ -7,6 +7,7 @@ import Canvas from '../../utils/ImageCreate'
 import '../../utils/ImageCreator.css'
 
 
+
 function Geesemint() {
 
     const refe = useRef(null);
@@ -30,7 +31,6 @@ function Geesemint() {
 
                             <div>
                                  <Canvas
-                                 textToShow="An Untold Story"
                                  width="500"
                                  height="500"
                                  />

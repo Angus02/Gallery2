@@ -5,11 +5,11 @@ import {
 } from "../utils/interact";
 
 
-
 const Canvas = props => {
   
   const canvasRef = useRef(null)
-  const colours = ['white', 'blue', 'red', 'yellow', 'green', 'purple', 'grey' , 'white', 'navy', 'black'];
+  //1-beak, 2-darkWing, 3-LightWing, 4-Neck, 5-Lightbody, 6-DarkBody, 7- LightWing, 8-DarkWing, 9-LightTail, 10-DarkTail 
+  const colours = ['#f97e57', '#3a261a', '#9e8b6f', '#be9178', '#f8ceb7', '#5d473a', '#faddd8' , '#3a322e', '#f1ebe0', '#915e50'];
   const row = [77, 142, 209, 275, 340, 406];
   const [walletAddress, setWallet] = useState("");
 
@@ -29,7 +29,7 @@ const Canvas = props => {
 
 
 
-  function DImage(ctx) {
+  function Back(ctx) {
     ctx.fillStyle = '#F8F0E3'
     ctx.beginPath()
     ctx.fillRect(0, 0, 500, 500)
@@ -39,6 +39,12 @@ const Canvas = props => {
     // ctx.drawImage(img, 0, 0)
       
   }
+
+  function Imag(ctx) {
+    var img = document.getElementById("BckImg");
+    ctx.drawImage(img, 0, 0, 500, 500);
+  }
+
   
 
   let x = 0
@@ -47,8 +53,8 @@ const Canvas = props => {
 
   const grid = ctx => {
 
-      DImage(ctx)
-    
+    Back(ctx)
+    Imag(ctx)
 
     for(y = 0; y < 6; y++)
     {
@@ -74,6 +80,7 @@ const Canvas = props => {
     <>
    <canvas ref={canvasRef} {...props}/>
   <h5>{String(walletAddress)}</h5>
+  <img id="BckImg" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
   </>
   )
 }
