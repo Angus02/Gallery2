@@ -7,8 +7,13 @@ import Geese from './components/pages/Geese'
 import Shallow from './components/pages/Shallow'
 import Geesemint from './components/pages/Geesemint';
 import ComingSoon from './components/pages/ComingSoon';
+import LogRocket from 'logrocket';
+// import setupLogRocketReact from 'logrocket-react'
+
 
 function App() {
+  LogRocket.init('2xlwjx/goos')
+  // setupLogRocketReact(LogRocket)
   return (
     <>
       <Router>
