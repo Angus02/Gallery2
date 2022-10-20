@@ -19,18 +19,46 @@ import { Button } from './Button';
 import './HeroSection.css';
 
 function HeroSection() {
+
+  const source = [ './media/goose_head_1.mp4', '/media/GooseVellumZig.mp4']
+  let x = 0;
+
+  var video = document.getElementById('hls-video');
+  var sarc = document.getElementById('change-src');
+
+  function changeBck() {
+    if(x>0)
+    {
+
+      video.pause()
+      sarc.setAttribute('src', source[0]);
+      video.load();
+      video.play();
+
+      x-=1;
+      alert(x);
+
+    }
+    else
+    {
+    x += 1;
+    alert(x);
+    }
+  }
+
   return (
     <div className='hero-container'>
-      <video src='/media/goose_head_1.mp4' autoPlay loop muted />
+      <video id='hls-video' autoPlay loop muted controls >
+        <source id='change-src' src={source[1]}  />
+      </video>
       <h1>Goose's Gallery</h1>
       <div className='hero-btns'>
         <Button
-          className='btns'
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          onClick={console.log('hey')}
+          onClick={changeBck}
         >
-          WATCH TRAILER <i className='far fa-play-circle' />
+          WATCH TRAILER
         </Button>
       </div>
     </div>
