@@ -10,7 +10,7 @@ import '../../utils/ImageCreator.css'
 
 function Geesemint() {
 
-    const refe = useRef(null);
+    const refe = useRef<'ImagDown'>(null);
 
     const onButtonClick = async () => {
         const dataUrl = await htmlToImage.toPng(refe.current);
@@ -20,7 +20,19 @@ function Geesemint() {
         link.href = dataUrl;
         link.click();
     }
-    
+
+
+    const onButtonClick2 = async () => {
+        htmlToImage.toJpeg(document.getElementById('centered'), { quality: 0.95 })
+        .then(function (dataUrl) {
+          var link = document.createElement('a');
+          link.download = 'my-image-name.jpeg';
+          link.href = dataUrl;
+          link.click();
+        });
+    }
+
+
     
     return (
         <div className='fill'>
@@ -29,7 +41,8 @@ function Geesemint() {
                     <div className='containerBlackFill'>
                         <div className='centered' >
 
-                            <div>
+                            <div >
+                                {/* ref={canvasRef} */}
                                  <Canvas
                                  width="500"
                                  height="500"
@@ -47,7 +60,7 @@ function Geesemint() {
                                 </div>
                             </div> */}
 
-                            <Button buttonStyle='btn--outline' buttonSize={'btn--large'} onClick={onButtonClick}>
+                            <Button buttonStyle='btn--outline' buttonSize={'btn--large'} onClick={onButtonClick2}>
                                     <span>Coming Soon</span>
                             </Button>
 

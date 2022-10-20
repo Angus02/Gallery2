@@ -41,22 +41,47 @@ const Canvas = props => {
   }
 
   function Imag(ctx) {
-    var img = document.getElementById("BckImg");
-    img.onload = function () {
-      ctx.drawImage(img, 0, 0, 500, 500);
-    }
+    // var img = document.getElementById("BckImg");
+    // img.onload = function () {
+    //   ctx.drawImage(img, 0, 0, 500, 500);
+    // }
+    const image = new Image();
+    image.onload = function(res) {
+      console.log("res", res);
+      ctx.drawImage(image, 0, 0, 500,500);
+    };
+    image.onerror = function(err) {
+      console.log("err", err);
+    };
+    image.src = require("../Gallery-Goose-Logo.png")
   }
-
-  
 
   let x = 0
   let y = 0
   let a = 0
 
+  function writeText(ctx) {
+    const  fontSize = 30, fontFamily = 'Arial', color = 'black', textAlign = 'left', textBaseline = 'top'
+   
+    ctx.beginPath();
+    ctx.font = fontSize + 'px ' + fontFamily;
+    ctx.textAlign = textAlign;
+    ctx.textBaseline = textBaseline;
+    ctx.fillStyle = color;
+    for(y=0; y < 10; y++)
+    {
+    ctx.fillText('Test Test Test', 100, y * 50);
+    }
+    ctx.stroke();
+  }
+  
+
+
   const grid = ctx => {
 
     Back(ctx)
     Imag(ctx)
+    writeText(ctx)
 
     for(y = 0; y < 6; y++)
     {
@@ -68,6 +93,7 @@ const Canvas = props => {
     }
   }
   
+
   useEffect(() => {
     
     const canvas = canvasRef.current
@@ -77,12 +103,13 @@ const Canvas = props => {
 
     grid(context)
   }, [grid])
+
   
   return (
     <>
-   <canvas ref={canvasRef} {...props}/>
-  <h5>{String(walletAddress)}</h5>
-  <img id="BckImg" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
+    <canvas ref={canvasRef} {...props}/>
+    <h5>{String(walletAddress)}</h5>
+    <img id="BckImg" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
   </>
   )
 }
