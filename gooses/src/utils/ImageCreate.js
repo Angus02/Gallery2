@@ -3,7 +3,9 @@ import {
   connectWallet,
   getCurrentWalletConnected 
 } from "../utils/interact";
-
+import {
+  atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
+} from 'mathjs'
 
 const Canvas = props => {
   
@@ -59,6 +61,8 @@ const Canvas = props => {
   let x = 0
   let y = 0
   let a = 0
+  let x1 = 0
+  let y1 = 0
 
   function writeText(ctx) {
     const  fontSize = 30, fontFamily = 'Arial', color = 'black', textAlign = 'left', textBaseline = 'top'
@@ -74,7 +78,36 @@ const Canvas = props => {
     }
     ctx.stroke();
   }
-  
+
+  const drawLine = (ctx, colour, x, y, x1, y1 ) => {
+    ctx.lineWidth = 0.2
+    ctx.strokeStyle = colour
+    ctx.beginPath()
+    ctx.moveTo(x,y)
+    ctx.lineTo(x1, y1)
+    ctx.stroke()
+
+  }
+
+
+  const dotx = []
+  const doty = []
+  const dist = []
+  const disCol = ["white", "grey", "black"]
+
+  function ShortLine(ctx, colour, x, y, x1, y1 )
+  {
+
+
+
+    ctx.lineWidth = 0.2
+    ctx.strokeStyle = "white"
+    ctx.beginPath()
+    ctx.moveTo(x,y)
+    ctx.lineTo(x1, y1)
+    ctx.stroke()
+
+  }
 
 
   const grid = ctx => {
@@ -89,19 +122,37 @@ const Canvas = props => {
       {
         a += 1;
         draw(ctx, colours[String(walletAddress)[a]], row[x], row[y])
+        dotx[x] = row[x]
+        doty[y] = row[y]
       }
     }
+
+    //     for(y1=0; y1 < 6; y1++)
+    //     {
+    //       for(x1=0; x1 < 6; x1++)
+    //       {
+    //         dist[x] = sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1))
+    //         dist.forEach(
+    //           ShortLine(ctx, colours[dist[x]], row[x], row[y], row[x1], row[y1])
+    //         )
+    //       }
+    //     }
+    //   }
+    // }
   }
   
 
-  useEffect(() => {
-    
+  useEffect(() => {    
     const canvas = canvasRef.current
     const context = canvas.getContext('2d')
     
     //Our draw come here
 
     grid(context)
+
+    var url = canvas.toDataURL();
+    console.log(url);
+
   }, [grid])
 
   

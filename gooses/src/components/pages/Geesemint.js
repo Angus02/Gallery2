@@ -5,6 +5,7 @@ import { Button } from '../Button'
 import * as htmlToImage from 'html-to-image'
 import Canvas from '../../utils/ImageCreate'
 import '../../utils/ImageCreator.css'
+import html2canvas from 'html2canvas'
 
 
 
@@ -31,7 +32,6 @@ function Geesemint() {
           link.click();
         });
     }
-
 
     
     return (
@@ -60,7 +60,7 @@ function Geesemint() {
                                 </div>
                             </div> */}
 
-                            <Button buttonStyle='btn--outline' buttonSize={'btn--large'} onClick={onButtonClick2}>
+                            <Button buttonStyle='btn--outline' buttonSize={'btn--large'} >
                                     <span>Coming Soon</span>
                             </Button>
 

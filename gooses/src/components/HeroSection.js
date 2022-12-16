@@ -13,7 +13,7 @@
 
 // export default HeroSection;
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
@@ -26,41 +26,88 @@ function HeroSection() {
   var video = document.getElementById('hls-video');
   var sarc = document.getElementById('change-src');
 
-  function changeBck() {
-    if(x>0)
+
+//   componentDidMount = () => {
+//     this.setVideo();
+//  }
+//  setVideo = () => {
+//     const browserLanguage = navigator.language || navigator.userLanguage;
+//     if(browserLanguage){
+//        if(browserLanguage.includes("en")){
+//           this.setState({ videoUrl: require('./media/goose_head_1.mp4') });
+    
+//        }else if(browserLanguage.includes("fr")){
+//           this.setState({ videoUrl: require('./media/GooseVellumZig.mp4') });
+    
+//        }else{
+//           this.setState({ videoUrl: require('./media/goose_head_1.mp4') });
+//        }
+ 
+//     }else{
+//        this.setState({ videoUrl: require('./media/goose_head_1.mp4') });
+//     }
+//  }
+
+  let v = 0;
+
+  function Pick()
+  {
+    if(v == 0)
     {
-
-      video.pause()
-      sarc.setAttribute('src', source[0]);
-      video.load();
-      video.play();
-
-      x-=1;
-      alert(x);
-
+      v = 1;
+      return (
+      Videos(v)
+      )
     }
     else
     {
-    x += 1;
-    alert(x);
+      v = 0;
+      return (
+      Videos(v)
+      )
+    }
+    console.log(v);
+  }
+
+
+  function Videos(a) {
+    if( a == 0)
+    {
+
+      return (
+        <video src='./media/goose_head_1.mp4' autoPlay loop muted controls/>
+      )
+    }
+    else
+    {
+
+      return(
+        <video src='./media/GooseVellumZig.mp4' autoPlay loop muted controls/>
+      )
     }
   }
 
+  useEffect(() => {
+    Pick()
+    Videos()
+  }, )
+
+
   return (
     <div className='hero-container'>
-      <video id='hls-video' autoPlay loop muted controls >
-        <source id='change-src' src={source[1]}  />
-      </video>
+      {/* <video src='./media/goose_head_1.mp4' autoPlay loop muted controls/> */}
+
       <h1>Goose's Gallery</h1>
-      <div className='hero-btns'>
+      {/* <div className='hero-btns'>
         <Button
           buttonStyle='btn--outline'
           buttonSize='btn--large'
-          onClick={changeBck}
+          onClick={() => {Pick()}}
         >
           WATCH TRAILER
         </Button>
-      </div>
+      </div> */}
+      <Pick/>
     </div>
   );
 }
