@@ -27,11 +27,8 @@ video {
 
 .containerGeese {
     position: relative;
-    text-align: center;
     color: black;
-    height: 100%;
     background-color: black;
-
 }
 
 .whiteBar {
@@ -61,6 +58,12 @@ video {
     text-align: centre;
     color: black;
     height: 100vh;
+}
+
+.containerBlackMint {
+    text-align: centre;
+    color: black;
+    height: 120vh;
 }
 
 .containerGreyFill {
@@ -146,6 +149,14 @@ video {
     }
 }
 
+@media screen and (max-width: 550px) {
+
+    .mintBtn {
+        display: none;
+    }
+}
+
+
 @media screen and (min-width: 1000px) {
 
     .containerGreyFill {
@@ -182,7 +193,6 @@ video {
     .centreLeftText {
         font-size: 32px;
     }
-
 }
 
 .centeredBottom {

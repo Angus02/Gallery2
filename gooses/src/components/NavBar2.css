@@ -71,7 +71,7 @@ ul {
 
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 503px) {
 
     li a {
         display: none;

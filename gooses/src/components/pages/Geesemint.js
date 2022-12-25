@@ -39,7 +39,7 @@ function Geesemint() {
         <div className='fill'>
                 <div className='containerGeese'>
         
-                    <div className='containerBlackFill'>
+                    <div className='containerBlackMint'>
                         <div className='centered' >
 
                             <div >

@@ -15,29 +15,28 @@ function Geese() {
 
       <div className='containerGeese'>
 
-      <a href='/#/geesemint' className='mintBtn'>
-        <Button buttonStyle='btn--outline' >
-          Create your Piece
-        </Button>
-      </a>
+        <a href='/#/geesemint' className='mintBtn'>
+          <Button buttonStyle='btn--outline' >
+            Create your Piece
+          </Button>
+        </a>
 
 
-          <img className='backImg' src='media/images/geese2.png'  />
-          <div className='centered' >Become one of the Geese</div>
+        <img className='backImg' src='media/images/geese2.png'  />
+        <div className='centered' >Join the Flock</div>
       </div>
+
+
       <div className='containerGeese'>
         <img className='backImg' src='media/images/GooseRight.png' />
-          <div className='centered' >As a Member</div>
-          <div className='centreRight'>
-            <div className='list' ></div>
-            <div className='list' ></div>
-            <div className='list' ></div>
-            <div className='list' ></div>
-          </div>
+          <div className='centeredTop' >Image Generation</div>
+
       </div>
+
+
       <div className='containerGeese'>
           <img className='backImg' src='media/images/GooseLeftCentre.png'  />
-          <div className='centered' >Unique Art with a Key</div>
+          <div className='centeredTop' >Why Purchase?</div>
           <div className='centreRight'>
             <div className='list' ></div>
             <div className='list' ></div>
@@ -45,9 +44,11 @@ function Geese() {
             <div className='list' ></div>
           </div>
       </div>
+
+
       <div className='containerGeese'>
         <img className='backImg' src='media/images/gooseNoseRight.png'  />
-          <div className='centered' >Part of the Future</div>
+          <div className='centeredTop' >Geese Seasons</div>
           <div className='centreRight'>
             <div className='list' ></div>
             <div className='list' ></div>
