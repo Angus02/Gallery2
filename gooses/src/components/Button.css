@@ -28,7 +28,7 @@ body {
     padding: 8px 20px;
     font-size: clamp(16px, 4vm, 22px);
     max-width: 200px;
-    max-height: 50px;
+    max-height: 40px;
 }
 
 .btn--large {

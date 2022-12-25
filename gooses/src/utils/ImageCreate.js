@@ -15,11 +15,15 @@ const Canvas = props => {
   const row = [77, 142, 209, 275, 340, 406];
   const [walletAddress, setWallet] = useState("");
 
-  useEffect(async () => { //TODO: implement
-    const {address, status} = await getCurrentWalletConnected();
-    setWallet(address);
+  useEffect( () => { //TODO: implement
 
-}, []);
+    async function data() {
+      const {address, status} = await getCurrentWalletConnected();
+      setWallet(address);
+    }
+
+    data();
+  }, []);
 
   const draw = (ctx, colour, posX, posY) => {
     ctx.fillStyle = colour
@@ -151,7 +155,7 @@ const Canvas = props => {
     grid(context)
 
     var url = canvas.toDataURL();
-    console.log(url);
+    // console.log(url);
 
   }, [grid])
 

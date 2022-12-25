@@ -4,12 +4,12 @@ import { Button } from '../Button'
 import Geese from './Geese'
 
 
-function Geesemint() {
+function ComingSoon() {
     
     return (
         <div className='fill'>
         
-                <div className='container'>
+                <div className='containerGeese'>
         
                     <div className='containerBlackFill'>
                         <div className='centered' >
@@ -31,4 +31,4 @@ function Geesemint() {
     );
 }
 
-export default Geesemint;
+export default ComingSoon;

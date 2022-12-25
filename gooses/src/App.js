@@ -26,12 +26,7 @@ function App() {
           <Route path='/comingsoon' element={<ComingSoon />} />
         </Routes>
       </Router>
-{/* 
-      <Router>
-        <NavBar />
-        <Route path='/' element= {<Home />} />
-        <Route path='/geese' element= {<Geese />} />
-      </Router> */}
+
     </>
   );
 }

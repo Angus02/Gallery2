@@ -17,6 +17,7 @@ import React, { useEffect } from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import './Geese.css'
 
 function HeroSection() {
 
@@ -94,21 +95,15 @@ function HeroSection() {
 
 
   return (
+    <>
     <div className='hero-container'>
-      {/* <video src='./media/goose_head_1.mp4' autoPlay loop muted controls/> */}
+      <video src='./media/goose_head_1.mp4' autoPlay loop muted/>
 
-      <h1>Goose's Gallery</h1>
-      {/* <div className='hero-btns'>
-        <Button
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-          onClick={() => {Pick()}}
-        >
-          WATCH TRAILER
-        </Button>
-      </div> */}
-      <Pick/>
+      <div className='centered' >
+        <h1>Goose's Gallery</h1>
+      </div>
     </div>
+    </>
   );
 }
 

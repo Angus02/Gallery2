@@ -5,7 +5,8 @@ import { Button } from '../Button'
 import * as htmlToImage from 'html-to-image'
 import Canvas from '../../utils/ImageCreate'
 import '../../utils/ImageCreator.css'
-import html2canvas from 'html2canvas'
+
+
 
 
 
@@ -36,7 +37,7 @@ function Geesemint() {
     
     return (
         <div className='fill'>
-                <div className='container'>
+                <div className='containerGeese'>
         
                     <div className='containerBlackFill'>
                         <div className='centered' >

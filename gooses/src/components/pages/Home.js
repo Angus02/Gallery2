@@ -18,6 +18,8 @@ import '../../App.css';
 // import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 // import Footer from '../Footer';
+import Explanation from './HomePage/HomeExplanation';
+
 
 function Home() {
   return (
@@ -25,6 +27,8 @@ function Home() {
       <HeroSection />
       {/* <Cards /> */}
       {/* <Footer /> */}
+      <Explanation />
+    
     </>
   );
 }

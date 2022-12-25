@@ -6,6 +6,18 @@ html {
     scroll-behavior: smooth;
 }
 
+video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+}
+
+.fill {
+    margin-top: 85px;
+}
+
 .container {
     position: relative;
     text-align: center;
@@ -13,11 +25,36 @@ html {
     height: 100%;
 }
 
+.containerGeese {
+    position: relative;
+    text-align: center;
+    color: black;
+    height: 100%;
+    background-color: black;
+
+}
+
+.whiteBar {
+    position: relative;
+    text-align: center;
+    color: white;
+    height: 1%;
+
+}
+
+.containerGrey {
+    position: relative;
+    text-align: center;
+    color: darkgray;
+    height: 100%;
+
+}
+
 .containerBlack {
     position: relative;
     text-align: centre;
     color: black;
-    
+    height: 400%;
 }
 
 .containerBlackFill {
@@ -26,9 +63,18 @@ html {
     height: 100vh;
 }
 
+.containerGreyFill {
+    text-align: centre;
+    color: darkgray;
+    height: 80vh;
+}
+
 .backImg {
+    color: black;
     width: 100%;
 }
+
+
 
 .centered {
     position: absolute;
@@ -36,16 +82,156 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 5vw;
+    font-size: 7vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.centeredTopW {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 10vh;
     font-family:'Times New Roman', Times, serif;
     z-index: 10;
 }
 
+.centeredTop {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10vh;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+@media screen and (min-width: 100px) {
+
+    .containerGreyFill {
+        height: 50vh;
+    }
+
+
+    .centeredTop {
+        /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+        font-size: 36px;
+    }
+
+    .centeredTopW {
+        /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+        font-size: 36px;
+    }
+
+    .centeredBottom {
+        /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+        font-size: 16px;
+    }
+
+    .centreRightText {
+        font-size: 16px;
+    }
+
+    .centreLeftText {
+        font-size: 16px;
+    }
+
+    .centered {
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .containerGreyFill {
+        height: 80vh;
+    }
+
+    .containerBlackFill {
+        height: 240vh;
+    }
+
+    .centered {
+        font-size: 32px;
+    }
+
+
+    .centeredTop {
+        font-size: 32px;
+    }
+
+    .centeredTopW {
+        font-size: 32px;
+    }
+
+    .centeredBottom {
+        /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+        font-size: 32px;
+        bottom: 10%;
+    }
+
+    .centreRightText {
+        font-size: 32px;
+    }
+
+    .centreLeftText {
+        font-size: 32px;
+    }
+
+}
+
+.centeredBottom {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 3vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+
 .centreRight {
     position:absolute;
-    top: 40%;
-    left: 75%;
+    top: 10vh;
+    right: 10vh;
+    width: 30%;
     color: white;
+}
+
+.centreLeft {
+    position:absolute;
+    top: 10vh;
+    left: 10vh;
+    width: 30%;
+
+    color: white;
+}
+
+.centreRightText {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    color: black;
+    font-size: 4vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+.centreLeftText {
+    position: absolute;
+    top: 35%;
+    right: 20%;
+    color: black;
+    font-size: 4vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
 }
 
 .list {
@@ -54,10 +240,16 @@ html {
     font-family:'Times New Roman', Times, serif;
 }
 
-.fill {
+.fillGrey {
+    background-color: #b68b85;
+    width: 100%;
+}
+
+.fillBlack {
     background-color: black;
     width: 100%;
 }
+
 
 .mintBtn {
     position: absolute;

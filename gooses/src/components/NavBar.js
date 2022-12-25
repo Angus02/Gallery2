@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react'
 import { Button } from './Button';
 import './NavBar.css';
+import './NavBar2.css';
+
 import { 
     connectWallet,
     getCurrentWalletConnected 
@@ -12,48 +14,22 @@ import '../App.css'
 function NavBar()
 {
     const [walletAddress, setWallet] = useState("");
-    const [setStatus] = useState("");
 
 
-    function addWalletListener() {
-        if (window.ethereum) {
-          window.ethereum.on("accountsChanged", (accounts) => {
-            if (accounts.length > 0) {
-              setWallet(accounts[0]);
-              setStatus("👆🏽 Write a message in the text-field above.");
-            } else {
-              setWallet("");
-              setStatus("🦊 Connect to Metamask using the top right button.");
-            }
-          });
-        } else {
-          setStatus(
-            <p>
-              {" "}
-              🦊{" "}
-              <a target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
-                You must install Metamask, a virtual Ethereum wallet, in your
-                browser.
-              </a>
-            </p>
-          );
-        }
-      }
 
+    useEffect(() => { //TODO: implement
 
-    useEffect(async () => { //TODO: implement
+      async function fetchData() {
         const {address, status} = await getCurrentWalletConnected();
         setWallet(address);
-        setStatus(status);
-    
-        addWalletListener();
+      }
+
+      fetchData();
     }, []);
 
 
     const connectWalletPressed = async () => { //TODO: implement
         const walletResponse = await connectWallet();
-        setStatus(walletResponse.status);
-        setWallet(walletResponse.address);
     };
 
 
@@ -81,39 +57,72 @@ function NavBar()
 
 
 
+    // return (
+    //     <>
+    //         <nav className="navbar">
+    //             <div className="navbar-container">
+    //                 <a href="/" className="navbar-logo2" >
+    //                   <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
+    //                 </a>
+    //                 <ul className='nav-menu'>
+    //                     <li className='nav-item'>
+    //                         <a href='/#/geese' className='nav-links'>
+    //                             Geese
+    //                         </a>
+    //                     </li>
+    //                     <li className='nav-item'>
+    //                         <a href='/#/shallow' className='nav-links'>
+    //                             Shallow
+    //                         </a>
+    //                     </li>
+
+    //                 </ul>
+    //                 {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
+    //                             {walletAddress.length > 0 ? (
+    //                             "Connected: " +
+    //                             String(walletAddress).substring(0, 4) +
+    //                             "..." +
+    //                             String(walletAddress).substring(38)
+    //                             ) : (
+    //                               Install()
+    //                 )}</Button>}
+    //             </div>
+    //         </nav>
+    //     </>
+
+    // )
+
     return (
-        <>
-            <nav className="navbar">
-                <div className="navbar-container">
-                    <a href="/" className="navbar-logo2" >
-                      <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
-                    </a>
-                    <ul className='nav-menu'>
-                        <li className='nav-item'>
-                            <a href='/#/geese' className='nav-links'>
-                                Geese
-                            </a>
-                        </li>
-                        <li className='nav-item'>
-                            <a href='/#/shallow' className='nav-links'>
-                                Shallow
-                            </a>
-                        </li>
+      <>
+        <ul>
+          <li>
+            <p>
+            {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
+              {walletAddress.length > 0 ? (
+              "Connected: " +
+              String(walletAddress).substring(0, 4) +
+              "..." +
+              String(walletAddress).substring(38)
+              ) : (
+              Install()
+              )}</Button>}
+            </p>
 
-                    </ul>
-                    {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
-                                {walletAddress.length > 0 ? (
-                                "Connected: " +
-                                String(walletAddress).substring(0, 4) +
-                                "..." +
-                                String(walletAddress).substring(38)
-                                ) : (
-                                  Install()
-                    )}</Button>}
-                </div>
-            </nav>
-        </>
+          </li>
 
+              
+          <li><a href='/#/shallow' > Shallow </a></li>
+
+
+
+
+          <li><a href='/#/geese'> Geese </a></li>
+
+          <lir><a href="/" className="navbar-logo2" >
+            <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
+          </a></lir>
+        </ul>
+      </>
     )
 }
 
