@@ -11,6 +11,11 @@ ul {
 
     z-index: 500;
 }
+
+.spacer {
+    padding: 27.5px 16px;
+
+}
   
   li {
     float: right;
@@ -20,7 +25,6 @@ ul {
     display: block;
     color: white;
     text-align: center;
-    padding: 27.5px 16px;
     text-decoration: none;
   }
   

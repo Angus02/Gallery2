@@ -50,7 +50,7 @@ function NavBar()
         return "Connect Wallet"
       } else {
         return (
-          <a className='installLink' href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'>Install MetaMask</a>
+          <p href='https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en'>Install MetaMask</p>
         )
       }
     }
@@ -96,20 +96,21 @@ function NavBar()
       <>
         <ul>
           <li>
-            <p>
-            {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
-              {walletAddress.length > 0 ? (
-              "Connected: " +
-              String(walletAddress).substring(0, 4) +
-              "..." +
-              String(walletAddress).substring(38)
-              ) : (
-              Install()
-              )}</Button>}
-            </p>
+            <div className='spacer'>
+              <p>
+              {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
+                {walletAddress.length > 0 ? (
+                "Connected: " +
+                String(walletAddress).substring(0, 4) +
+                "..." +
+                String(walletAddress).substring(38)
+                ) : (
+                Install()
+                )}</Button>}
+              </p>
+              </div>
 
           </li>
-
               
           <li><a href='/#/shallow' > Shallow </a></li>
 
