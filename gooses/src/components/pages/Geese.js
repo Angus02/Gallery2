@@ -22,11 +22,11 @@ function Geese() {
       </a>
 
 
-          <img className='backImg' src='media/images/geese2.png' alt='goo' />
+          <img className='backImg' src='media/images/geese2.png'  />
           <div className='centered' >Become one of the Geese</div>
       </div>
       <div className='containerGeese'>
-        <img className='backImg' src='media/images/GooseRight.png' alt='goo' />
+        <img className='backImg' src='media/images/GooseRight.png' />
           <div className='centered' >As a Member</div>
           <div className='centreRight'>
             <div className='list' ></div>
@@ -36,7 +36,7 @@ function Geese() {
           </div>
       </div>
       <div className='containerGeese'>
-          <img className='backImg' src='media/images/GooseLeftCentre.png' alt='goo' />
+          <img className='backImg' src='media/images/GooseLeftCentre.png'  />
           <div className='centered' >Unique Art with a Key</div>
           <div className='centreRight'>
             <div className='list' ></div>
@@ -46,7 +46,7 @@ function Geese() {
           </div>
       </div>
       <div className='containerGeese'>
-        <img className='backImg' src='media/images/gooseNoseRight.png' alt='goo' />
+        <img className='backImg' src='media/images/gooseNoseRight.png'  />
           <div className='centered' >Part of the Future</div>
           <div className='centreRight'>
             <div className='list' ></div>

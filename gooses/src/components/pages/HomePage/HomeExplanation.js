@@ -29,8 +29,8 @@ function Explanation() {
 
                 <div className='containerGreyFill'>
 
-                    <img className='centreLeft' src='media/images/Gallery-Goose-Logo.png' alt='goo' width={300}/>
-                    <img className='centreRight' src='media/images/MetaMaskLogo.png' alt='goo' width={300}/>
+                    <img className='centreLeft' src='media/images/Gallery-Goose-Logo.png'  width={300}/>
+                    <img className='centreRight' src='media/images/MetaMaskLogo.png'  width={300}/>
 
                     <div className='centeredBottom' >
                         <p>This is a Web3 Application and requires MetaMask</p>

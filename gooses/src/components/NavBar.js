@@ -119,7 +119,7 @@ function NavBar()
           <li><a href='/#/geese'> Geese </a></li>
 
           <lir><a href="/" className="navbar-logo2" >
-            <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
+            <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' width={80}/>
           </a></lir>
         </ul>
       </>

@@ -164,7 +164,7 @@ const Canvas = props => {
     <>
     <canvas ref={canvasRef} {...props}/>
     <h5>{String(walletAddress)}</h5>
-    <img id="BckImg" src='media/images/Gallery-Goose-Logo.png' alt='goo' width={80}/>
+    <img id="BckImg" src='media/images/Gallery-Goose-Logo.png' width={80}/>
   </>
   )
 }
