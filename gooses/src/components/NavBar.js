@@ -98,16 +98,16 @@ function NavBar()
           <li>
             <div className='spacer'>
               <p>
-              {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
-                {walletAddress.length > 0 ? (
-                "Connected: " +
-                String(walletAddress).substring(0, 4) +
-                "..." +
-                String(walletAddress).substring(38)
-                ) : (
-                Install()
-                )}</Button>}
-              </p>
+                {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
+                  {walletAddress.length > 0 ? (
+                  "Connected: " +
+                  String(walletAddress).substring(0, 4) +
+                  "..." +
+                  String(walletAddress).substring(38)
+                  ) : (
+                  Install()
+                  )}</Button>}
+                </p>
               </div>
 
           </li>
