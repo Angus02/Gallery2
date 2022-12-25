@@ -97,7 +97,7 @@ function HeroSection() {
   return (
     <>
     <div className='hero-container'>
-      <video src='./media/goose_head_1.mp4' autoPlay loop muted/>
+      <video src='./media/goose_head_1.mp4' playsInline autoPlay loop muted/>
 
       <div className='centered' >
         <h1>Goose's Gallery</h1>
