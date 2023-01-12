@@ -13,10 +13,18 @@ function Explanation() {
                 <div className='container'>
         
                     <div className='containerBlackFill'>
-                        <div className='centeredTop' >
+                        {/* <div className='centeredTop' >
 
                             <p>Who We Are</p>
 
+                        </div> */}
+
+                        <div className='middleLeftText'>
+                            <p>Producing Projects With Real-World Usability</p>
+                        </div>
+
+                        <div className='middleRightText'>
+                            <p>A new movement bridging the gap between physical  products and blockchain technology.</p>
                         </div>
                     </div>
                 </div>

@@ -7,6 +7,7 @@ import {
   atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
 } from 'mathjs'
 
+
 const Canvas = props => {
   
   const canvasRef = useRef(null)
@@ -54,12 +55,14 @@ const Canvas = props => {
     const image = new Image();
     image.onload = function(res) {
       console.log("res", res);
-      ctx.drawImage(image, 0, 0, 500,500);
+      ctx.drawImage(image, -50, -220, 1080,720);
     };
     image.onerror = function(err) {
       console.log("err", err);
     };
-    image.src = require("../Gallery-Goose-Logo.png")
+    // image.src = require("../Gallery-Goose-Logo.png")
+    image.src = require("../sampleGooseRender.png")
+
   }
 
   let x = 0
@@ -130,19 +133,6 @@ const Canvas = props => {
         doty[y] = row[y]
       }
     }
-
-    //     for(y1=0; y1 < 6; y1++)
-    //     {
-    //       for(x1=0; x1 < 6; x1++)
-    //       {
-    //         dist[x] = sqrt((x - x1) * (x - x1) + (y - y1) * (y - y1))
-    //         dist.forEach(
-    //           ShortLine(ctx, colours[dist[x]], row[x], row[y], row[x1], row[y1])
-    //         )
-    //       }
-    //     }
-    //   }
-    // }
   }
   
 

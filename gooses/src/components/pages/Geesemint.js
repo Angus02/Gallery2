@@ -5,7 +5,7 @@ import { Button } from '../Button'
 import * as htmlToImage from 'html-to-image'
 import Canvas from '../../utils/ImageCreate'
 import '../../utils/ImageCreator.css'
-
+import ThreeGraphics from '../../threePackage/SceneSetup copy.js'
 
 
 
@@ -36,18 +36,22 @@ function Geesemint() {
 
     
     return (
+        <>
         <div className='fill'>
+
                 <div className='containerGeese'>
         
+                
                     <div className='containerBlackMint'>
                         <div className='centered' >
 
                             <div >
+                                <ThreeGraphics />
                                 {/* ref={canvasRef} */}
-                                 <Canvas
+                                 {/* <Canvas
                                  width="500"
                                  height="500"
-                                 />
+                                 /> */}
                             </div>
 
                             {/* <div class="parent" ref={refe}>
@@ -61,11 +65,17 @@ function Geesemint() {
                                 </div>
                             </div> */}
 
+                        </div>
+
+
+                        <div className='centeredBottom'>
                             <Button buttonStyle='btn--outline' buttonSize={'btn--large'} >
                                     <span>Coming Soon</span>
                             </Button>
-
                         </div>
+
+
+
                         <div className='centreRight'>
                             <div className='list' ></div>
                             <div className='list' ></div>
@@ -76,6 +86,7 @@ function Geesemint() {
                     </div>
                 </div>
         </div>
+        </>
     );
 }
 

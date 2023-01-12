@@ -63,7 +63,7 @@ video {
 .containerBlackMint {
     text-align: centre;
     color: black;
-    height: 120vh;
+    height: 100vh;
 }
 
 .containerGreyFill {
@@ -147,6 +147,14 @@ video {
     .centered {
         font-size: 30px;
     }
+
+    .middleRightText {
+        font-size: 16px;
+    }
+
+    .middleLeftText {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -193,6 +201,14 @@ video {
     .centreLeftText {
         font-size: 32px;
     }
+
+    .middleRightText {
+        font-size: 32px;
+    }
+
+    .middleLeftText {
+        font-size: 12px;
+    }
 }
 
 .centeredBottom {
@@ -224,6 +240,28 @@ video {
     color: white;
 }
 
+.middleLeftText {
+    position:absolute;
+    top: 40%;
+    left: 5%;
+    width: 30%;
+    color: white;
+    font-size: 4vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+.middleRightText {
+    position:absolute;
+    top: 35%;
+    right: 5%;
+    width: 30%;
+    color: white;
+    font-size: 4vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
 .centreRightText {
     position: absolute;
     top: 35%;
@@ -251,7 +289,7 @@ video {
 }
 
 .fillGrey {
-    background-color: #b68b85;
+    background-color: #D5D3D5;
     width: 100%;
 }
 

@@ -1,11 +1,11 @@
 ul {
     position: fixed;
-    top: 0;
+    top: 0px;
     width: 100%;
 
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     overflow: hidden;
     background-color: #333;
 
@@ -13,72 +13,118 @@ ul {
 }
 
 .spacer {
-    padding: 27.5px 16px;
+padding: 27.5px 16px;
+}
 
+li {
+  float: right;
+}
+
+li p {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 60%;
+}
+
+li p:hover:not(.active) {
+  background-color: #111;
+}
+
+li m {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+li m:hover:not(.active) {
+  background-color: #111;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 35px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
 }
   
-  li {
-    float: right;
+.active {
+  background-color: #04AA6D;
+}
+
+
+lir {
+  float: left;
+}
+
+lir a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 2px 12px;
+  margin-left: auto;
+  margin-top: auto;
+  text-decoration: none;
+}
+
+lir a:hover:not(.active) {
+  background-color: #111;
+}
+
+
+
+@media (max-width: 503px) {
+
+  li a {
+      display: none;
   }
 
   li p {
+    display: none;
+  }
+
+  .li.responsive {position: relative;}
+  .li.responsive .icon {
+    float: none;
     display: block;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-  }
-  
-  li p:hover:not(.active) {
-    background-color: #111;
+    text-align: left;
   }
 
+  /* ul {
+    width: 20%;
+    height: 100%;
+  }
 
-  li a {
+  li {
+    margin-top: 10%;
+    float:none;
+    display: vertical-align;
+  }
+
+  li m {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 35px 16px;
-    text-decoration: none;
+    margin-top: 80px;
+  } */
+
+}
+
+
+@media (min-width: 503px) {
+
+  li m {
+    display: none;
+  }
+
+  li p {
+    display: contents;
   }
   
-  li a:hover:not(.active) {
-    background-color: #111;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-  }
-
-
-  lir {
-    float: left;
-  }
-  
-  lir a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 2px 12px;
-    margin-left: auto;
-    text-decoration: none;
-  }
-  
-  lir a:hover:not(.active) {
-    background-color: #111;
-  }
-
-  @media screen and (min-width: 100px) {
-
-    lir a {
-        margin-left: auto;
-    }
-
-  }
-
-  @media (max-width: 503px) {
-
-    li a {
-        display: none;
-    }
-    
-  }
+}
