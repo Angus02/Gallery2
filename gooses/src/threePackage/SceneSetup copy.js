@@ -140,13 +140,20 @@ const ThreeGraphics = props => {
         const Amblight = new THREE.AmbientLight( 0x404040, 1.5 ); // soft white light
         scene.add( Amblight );
 
+        let r = 0;
+
         function animate() {
-        requestAnimationFrame( animate );
-        // cube.rotation.y += 0.01;
-        // cube_2.position.x += 0.05;
-        renderer.render( scene, camera );
+            r += 1;
+            if(r < 30)
+            {
+                requestAnimationFrame( animate );
+            }
+            // cube.rotation.y += 0.01;
+            // cube_2.position.x += 0.05;
+            renderer.render( scene, camera );
         }
         animate();
+        
 
     }, []);
 
