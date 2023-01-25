@@ -9,8 +9,11 @@
     "@testing-library/user-event": "^13.5.0",
     "buffer": "^6.0.3",
     "canvas": "^2.10.1",
+    "dotenv": "^16.0.3",
+    "ethers": "^5.7.2",
     "html-to-image": "^1.10.8",
     "html2canvas": "^1.4.1",
+    "ipfs-http-client": "^60.0.0",
     "logrocket": "^3.0.1",
     "mathjs": "^11.3.2",
     "react": "^18.2.0",
@@ -43,5 +46,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.0.1"
   }
 }

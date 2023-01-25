@@ -4,9 +4,7 @@ import '../../utils/ImageCreator.css'
 import { Button } from '../Button'
 import * as htmlToImage from 'html-to-image'
 import Canvas from '../../utils/ImageCreate'
-import '../../utils/ImageCreator.css'
 import ThreeGraphics from '../../threePackage/SceneSetup copy.js'
-
 
 
 

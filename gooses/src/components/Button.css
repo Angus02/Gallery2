@@ -36,6 +36,13 @@ body {
     font-size: 20px;
 }
 
+.btn--Extra-large {
+    padding: 24px 52px;
+    color:white;
+    text-decoration-thickness:var(--primary);
+    font-size: 5vh;
+}
+
 .btn--medium:hover, .btn--large:hover {
     background: #fff;
     color: #2323;
