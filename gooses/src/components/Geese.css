@@ -74,7 +74,9 @@ video {
 
 .backImg {
     color: black;
+    height: 100%;
     width: 100%;
+    margin-top: ;
 }
 
 
@@ -102,6 +104,15 @@ video {
     z-index: 10;
     text-align: center;
     vertical-align: middle;
+}
+
+.imageBottom {
+    position: relative;
+    width: 100%;
+}
+
+.textSpacer {
+    height: 10vh;
 }
 
 .centeredTopW {
@@ -132,6 +143,10 @@ video {
         height: 50vh;
     }
 
+    .textSpacer {
+        height: 10vh;
+    }
+
 
     .centeredTop {
         /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
@@ -157,7 +172,7 @@ video {
     }
 
     .centered {
-        font-size: 30px;
+        font-size: 15px;
     }
 
     .middleRightText {
@@ -184,7 +199,7 @@ video {
     }
 
     .containerBlackFill {
-        height: 240vh;
+        height: 100vh;
     }
 
     .centered {
@@ -193,7 +208,53 @@ video {
 
 
     .centeredTop {
+        font-size: 62px;
+    }
+
+    .centeredTopW {
         font-size: 32px;
+    }
+
+    .centeredBottom {
+        /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
+        font-size: 32px;
+        bottom: 10%;
+    }
+
+    .centreRightText {
+        font-size: 32px;
+    }
+
+    .centreLeftText {
+        font-size: 32px;
+    }
+
+    .middleRightText {
+        font-size: 32px;
+    }
+
+    .middleLeftText {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+
+    .containerGreyFill {
+        height: 80vh;
+    }
+
+    .containerBlackFill {
+        height: 100vh;
+    }
+
+    .centered {
+        font-size: 62px;
+    }
+
+
+    .centeredTop {
+        font-size: 62px;
     }
 
     .centeredTopW {
@@ -229,7 +290,7 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
     color: black;
-    font-size: 3vw;
+    font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
     z-index: 10;
 }
@@ -258,18 +319,18 @@ video {
     left: 5%;
     width: 30%;
     color: white;
-    font-size: 4vw;
+    font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
     z-index: 10;
 }
 
 .middleRightText {
     position:absolute;
-    top: 35%;
+    top: 39%;
     right: 5%;
     width: 30%;
     color: white;
-    font-size: 4vw;
+    font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
     z-index: 10;
 }
@@ -279,7 +340,7 @@ video {
     top: 35%;
     left: 20%;
     color: black;
-    font-size: 4vw;
+    font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
     z-index: 10;
 }
@@ -289,7 +350,7 @@ video {
     top: 35%;
     right: 20%;
     color: black;
-    font-size: 4vw;
+    font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
     z-index: 10;
 }
@@ -313,11 +374,22 @@ video {
 
 .mintBtn {
     position: absolute;
-    margin-left: 20px;
-    margin-top: 20px;
+    margin-left: 5%;
+    margin-top: 5%;
     color: white;
 }
 
 .mintBtn .btn {
+    margin: 6px;
+}
+
+.flockBtn {
+    position: absolute;
+    margin-left: 80%;
+    margin-top: 5%;
+    color: white;
+}
+
+.flockBtn .btn {
     margin: 6px;
 }

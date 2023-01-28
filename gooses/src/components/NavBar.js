@@ -36,7 +36,7 @@ function NavBar()
 
 
   const connectWalletPressed = async () => { //TODO: implement
-      const walletResponse = await connectWallet();
+    const walletResponse = await connectWallet();
   };
 
 

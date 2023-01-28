@@ -26,7 +26,9 @@ function Explanation() {
                         <div className='middleRightText'>
                             <p>A new movement bridging the gap between physical  products and blockchain technology.</p>
                         </div>
+
                     </div>
+                    <img className='imageBottom' src='media/images/environment3.png' />
                 </div>
         </div>
 
@@ -36,6 +38,8 @@ function Explanation() {
 
 
                 <div className='containerGreyFill'>
+                    <img className='imageBottom' src='media/images/environment3.1.png' />
+
 
                     <img className='centreLeft' src='media/images/Gallery-Goose-Logo.png'  width={300}/>
                     <img className='centreRight' src='media/images/MetaMaskLogo.png'  width={300}/>
@@ -60,9 +64,18 @@ function Explanation() {
                     <div className='centeredTop' >
 
                         <p>Road Map</p>
+                    </div>
+                    <div className='centered' >
+                        <p className='textSpacer'>Release of the Geese</p>
+                        <p className='textSpacer'>Release of first physical collection</p>
+                        <p className='textSpacer'>Release of the Shallows Project</p>
+                        <p className='textSpacer'>Building of the Space Station</p>
 
                     </div>
+
                 </div>
+                <img className='imageBottom' src='media/images/pyro.0250.png' />
+
             </div>
         </div>
 
@@ -80,11 +93,11 @@ function Explanation() {
                     </div>
 
                     <div className='centreRightText'>
-                        <p> Dan </p>    
+                        <p> Goose 1 </p>    
                     </div>
 
                     <div className='centreLeftText'>
-                        <p> Angus </p>    
+                        <p> Goose 2 </p>    
                     </div>
 
                 </div>

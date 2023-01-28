@@ -1,6 +1,5 @@
 // import html2canvas from 'html2canvas'
 
-
 // const exportAsImage = async (element, imageFileName) => {
 //   const html = document.getElementsByTagName("html")[0];
 //   const body = document.getElementsByTagName("body")[0];
@@ -19,7 +18,6 @@
 //   html.style.width = null;
 //   body.style.width = null;
 //   };
-
 
 
 export const connectWallet = async () => {

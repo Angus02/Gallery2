@@ -8,7 +8,7 @@ import { create as ipfsHttpClient, globSource } from "ipfs-http-client";
 import { Buffer } from 'buffer';
 import metadata from './metadata';
 import { Button } from '../components/Button';
-import mintToken from '../utils/Minter';
+// import mintToken from '../utils/Minter';
 
 import { 
     connectWallet,
@@ -281,7 +281,7 @@ const ThreeGraphics = props => {
             
             Draw("myScene", num);
 
-            console.log(projectId);
+            // console.log(authorization, "authorization");
         }
         load();        
         
@@ -311,7 +311,7 @@ const ThreeGraphics = props => {
                 if(secondResult)
                 {
                     const tokenURI = Infura_HTTPS + secondResult.path;
-                    // console.log("congratulations on your purchase, ipfs at: ", tokenURI);
+                    console.log("congratulations on your purchase, ipfs at: ", tokenURI);
 
                     // mintToken(walletAddress, tokenURI);
                 }
@@ -366,10 +366,6 @@ const ThreeGraphics = props => {
         // form.reset();
     };
 
-    const Mint = async() => {
-        mintToken("https://gooses-members.infura-ipfs.io/ipfs/QmZYWAdDZK1TpG7ULvcfoth994VeFeyy4iTMQWuBBgyXbc");
-    }
-
 
     return (
         <>
@@ -379,7 +375,7 @@ const ThreeGraphics = props => {
                 {walletAddress != "" ? (
                     <>
                         <form onSubmit={Upload}>
-                        <Button buttonStyle='btn--outline' buttonSize='btn--Extra-large'  type="submit" >Mint for 0.1 eth</Button>
+                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Test Button</Button>
                         </form>
                     </>
 
