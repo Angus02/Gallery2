@@ -1,5 +1,4 @@
 import { ethers } from "ethers";
-import { connectWallet } from "./interact";
 
 import TestContract from './TestContract2.sol/TestGoose2.json';
 
@@ -7,7 +6,7 @@ import TestContract from './TestContract2.sol/TestGoose2.json';
 // const contractAddress = '0x8667eA915895bBc1D403B56c7e6f4eAEfdBa3B9b';
 const contractAddress = '0xf6905210968fb85ff664a77a92a4751bd5ca2e80';
 
-const provider = new ethers.providers.Web3Provider(window.ethereum);
+const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 
 const signer = provider.getSigner();
 
@@ -16,8 +15,6 @@ const contract = new ethers.Contract(contractAddress, TestContract.abi, signer);
 
 
 const mintToken = async (walletAddress, metaData) => {
-    const connection = contract.connect(signer);
-    const addr = connection.address;
     const result = await contract.PayToMint(walletAddress, metaData,
         {
             value: ethers.utils.parseEther('0.1')
