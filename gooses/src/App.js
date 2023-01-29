@@ -21,10 +21,10 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element= {<Home />} />
-          <Route path='/geese' element= {<Geese />} />
+          {/* <Route path='/geese' element= {<Geese />} />
           <Route path='/shallow' element={<Shallow />} />
           <Route path='/geesemint' element={<Geesemint />} />
-          <Route path='/comingsoon' element={<ComingSoon />} />
+          <Route path='/comingsoon' element={<ComingSoon />} /> */}
 
           {/* <Route element={<PrivateRoutes />}>
             <Route path='/dash' element={<DashMain />} />

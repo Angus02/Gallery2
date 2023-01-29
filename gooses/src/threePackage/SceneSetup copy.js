@@ -2,9 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 // import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { Lensflare, LensflareElement } from 'three/addons/objects/Lensflare.js';
 import 'canvas';
-import { create as ipfsHttpClient, globSource } from "ipfs-http-client";
+import { create as ipfsHttpClient } from "ipfs-http-client";
 import { Buffer } from 'buffer';
 import metadata from './metadata';
 import { Button } from '../components/Button';
@@ -13,12 +12,10 @@ import React from 'react';
 
 
 import { 
-    connectWallet,
     getCurrentWalletConnected 
 } from "../utils/interact";
 
 import '../components/Geese.css'
-import { ImageUtils } from 'three';
 
 
 const projectId = process.env.REACT_APP_projectId;
@@ -29,17 +26,12 @@ const authorization = "Basic " + btoa(projectId + ":" + projectSecretKey);
 
 const ThreeGraphics = props => {
 
-    const mountRef = useRef(null);
 
     const colours = ['#922B21', '#943126', '#633974', '#5B2C6F', '#1A5276', '#21618C', '#117864' , '#0E6655', '#196F3D', '#1D8348', '#9A7D0A', '#9C640C', '#935116', '#873600', '#979A9A', '#797D7F', '#5F6A6A', '#515A5A', '#212F3C', '#1C2833'];
     const [walletAddress, setWallet] = useState("");
-    const [UsableAddress, setAddress] = useState(null);
-    const [URI, setUri] = useState("");
     const [buff, setBuff] = useState("");
     const [images, setImages] = useState([])
 
-
-    const ctx = document.getElementById("myScene"); 
 
     const ipfs = ipfsHttpClient({
       url: "https://ipfs.infura.io:5001/api/v0",
@@ -51,7 +43,7 @@ const ThreeGraphics = props => {
 
 
     async function data() {
-        const {address, status} = await getCurrentWalletConnected();
+        const {address} = await getCurrentWalletConnected();
         setWallet(address);
 
 
@@ -60,7 +52,6 @@ const ThreeGraphics = props => {
         
         let add = addre.replace(/[^1-9]/gi, '');
         // console.log(add);
-        setAddress(add);
         return add;
     }
 
@@ -83,7 +74,6 @@ const ThreeGraphics = props => {
         camera.position.z = 150;    
         camera.position.x = 0;
 
-        let w,h,d,x,y,z = 0;
 
         function box(w,h,d,x,y,z, colour) {
 
@@ -195,8 +185,6 @@ const ThreeGraphics = props => {
 
         async function Multispheres() {
 
-            let num = 123456789;
-            let str = num.toString();
             let u = await addr;
             // console.log(u[1]);
 
@@ -206,7 +194,7 @@ const ThreeGraphics = props => {
             {
               for(c = 0; c < 10; c++)
               {
-                if(a == 20)
+                if(a === 20)
                 {
                     a = 0;
                 }
@@ -253,21 +241,9 @@ const ThreeGraphics = props => {
             // const result = await ipfs.add(buffer);
 
             // console.log(result.path);
-            setUri(URL);
             setBuff(buffer);
         }, 5000);
 
-    }
-
-    const convert = ctx => {
-        // const ctx = canvasRef.current
-    
-    
-        let url = ctx.toDataURL('image/png');
-        const buffer = Buffer(url.split(",")[1], 'base64');
-        // console.log(buffer);
-        
-        return buffer;
     }
 
 
@@ -369,7 +345,7 @@ const ThreeGraphics = props => {
         <>
 
             <div className='cemtered'>
-                {walletAddress != "" ? (
+                {walletAddress !== "" ? (
                     <>
                         <div className='mintBtn2'>
 
