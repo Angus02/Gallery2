@@ -8,7 +8,9 @@ import { create as ipfsHttpClient, globSource } from "ipfs-http-client";
 import { Buffer } from 'buffer';
 import metadata from './metadata';
 import { Button } from '../components/Button';
-// import mintToken from '../utils/Minter';
+import mintToken from '../utils/Minter';
+import React from 'react';
+
 
 import { 
     connectWallet,
@@ -313,7 +315,7 @@ const ThreeGraphics = props => {
                     const tokenURI = Infura_HTTPS + secondResult.path;
                     console.log("congratulations on your purchase, ipfs at: ", tokenURI);
 
-                    // mintToken(walletAddress, tokenURI);
+                    mintToken(walletAddress, tokenURI);
                 }
 
 
@@ -331,52 +333,52 @@ const ThreeGraphics = props => {
             // setUri(URL);
         }, 5000);
 
-
-
-        // const file = URL;
-        // console.log(file);
-
-        // const result = await ipfs.add(file);
-
-        // console.log(result.path);
-
-        // if(result)
-        // {
-        //   metadata.image = Infura_HTTPS + result.path;
-        //   let metadataBuffer = Buffer.from(JSON.stringify(metadata));
-        //   const secondResult = await ipfs.add(metadataBuffer);
-        //   if(secondResult)
-        //   {
-        //     const tokenURI = Infura_HTTPS + secondResult.path;
-        //     console.log("success, transaction hash: ", secondResult.path);
-        //     // mintToken(metadata);
-        //   }
-
-        
-        //     setImages([
-        //         ...images,
-        //         {
-        //         cid: result.cid,
-        //         path: result.path,
-        //         },
-        //     ]);
-            // console.log(result.path);
-        // }
-
-        // form.reset();
     };
+
+    class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            showComponent: false,
+          };
+          this._onButtonClick = this._onButtonClick.bind(this);
+        }
+      
+        _onButtonClick() {
+          this.setState({
+            showComponent: true,
+          });
+        }
+      
+        render() {
+          return (
+            <div>
+                    <form onSubmit={Upload}>
+                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={this._onButtonClick} type="submit" >Test Button</Button>
+                        </form>              
+                {this.state.showComponent ?
+                 null : null
+              }
+            </div>
+          );
+        }
+    }
 
 
     return (
         <>
-            {/* <canvas id="myThreeJsCanvas" /> */}
 
-            <div className='centered'>
+            <div className='cemtered'>
                 {walletAddress != "" ? (
                     <>
-                        <form onSubmit={Upload}>
-                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Test Button</Button>
-                        </form>
+                        <div className='mintBtn2'>
+
+                            {/* <form onSubmit={Upload}>
+                            <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Test Button</Button>
+                            </form> */}
+
+                            {/* <MyComponent /> */}
+                        </div>
                     </>
 
                 ) : ( 
