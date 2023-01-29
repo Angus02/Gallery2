@@ -15,16 +15,20 @@ const contract = new ethers.Contract(contractAddress, TestContract.abi, signer);
 
 
 const mintToken = async (walletAddress, metaData) => {
-    const result = await contract.PayToMint(walletAddress, metaData,
-        {
-            value: ethers.utils.parseEther('0.1')
-        
-        });
-    await result.wait();
-        // const result = await contract.safeMint(walletAddress, metaData);
 
-        // await result.wait();
-    console.log(metaData,  "metadata");
+    if(window.ethereum)
+    {
+        const result = await contract.PayToMint(walletAddress, metaData,
+            {
+                value: ethers.utils.parseEther('0.1')
+            
+            });
+        await result.wait();
+            // const result = await contract.safeMint(walletAddress, metaData);
+
+            // await result.wait();
+        console.log(metaData,  "metadata");
+    }
 };
 
 

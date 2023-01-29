@@ -17,25 +17,34 @@ const contract = new ethers.Contract(contractAddress, TestContract.abi, signer);
 
 const ImageURL = async (walletAddress) => {
 
-    const wall = await (await getCurrentWalletConnected()).address;
+    if(window.ethereum)
+    {
+
+        const wall = await (await getCurrentWalletConnected()).address;
 
 
-    const balance = await contract.balanceOf(wall);
- 
-    for(let i = 0; i < balance; i++) {
-        const tokenId = await contract.tokenOfOwnerByIndex(wall, i)
+        const balance = await contract.balanceOf(wall);
+    
+        for(let i = 0; i < balance; i++) {
+            const tokenId = await contract.tokenOfOwnerByIndex(wall, i)
 
-        let tokenMetaDataURI = await contract.tokenURI(tokenId)
+            let tokenMetaDataURI = await contract.tokenURI(tokenId)
 
-        const tokenMetaData = await fetch( tokenMetaDataURI).then((response) => response.json())
+            const tokenMetaData = await fetch( tokenMetaDataURI).then((response) => response.json())
 
-        const subet = (({image}) => ({image}))(tokenMetaData);
-        const Image = subet.image;
-        // console.log(Image);
+            const subet = (({image}) => ({image}))(tokenMetaData);
+            const Image = subet.image;
+            // console.log(Image);
 
 
-        return Image;
+            return Image;
+        }
     }
+    else
+    {
+        return null;
+    }
+    
 
 };
 

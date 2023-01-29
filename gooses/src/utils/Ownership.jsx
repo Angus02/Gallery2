@@ -17,21 +17,29 @@ const contract = new ethers.Contract(contractAddress, TestContract.abi, signer);
 
 const checkOwnership = async (walletAddress) => {
 
-    const wall = await (await getCurrentWalletConnected()).address;
-
-
-    const result = await contract.balanceOf(wall);
-        // const result = await contract.safeMint(walletAddress, metaData);
-
-    const balance = result.toNumber();
-        // await result.wait();
-    // console.log(balance,  "result");
-
-    if(balance >= 1)
+    if(window.ethereum)
     {
-        return true;
+
+        const wall = await (await getCurrentWalletConnected()).address;
+
+
+        const result = await contract.balanceOf(wall);
+            // const result = await contract.safeMint(walletAddress, metaData);
+
+        const balance = result.toNumber();
+            // await result.wait();
+        // console.log(balance,  "result");
+
+        if(balance >= 1)
+        {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
-    else {
+    else
+    {
         return false;
     }
 };
