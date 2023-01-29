@@ -9,15 +9,15 @@ const contractAddress = '0x62c06dcbb8907601c740c57af12e80aada1fa1a7';
 
 const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 
-const signer = provider.getSigner();
+const signer = ((window.ethereum != null) ? provider.getSigner() : null);
 
-const contract = new ethers.Contract(contractAddress, TestContract.abi, signer);
+const contract = ((window.ethereum != null) ? new ethers.Contract(contractAddress, TestContract.abi, signer)  : null);
 
 
 
 const checkOwnership = async (walletAddress) => {
 
-    if(window.ethereum)
+    if(window.ethereum != null)
     {
 
         const wall = await (await getCurrentWalletConnected()).address;

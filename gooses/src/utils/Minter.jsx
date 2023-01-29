@@ -8,15 +8,15 @@ const contractAddress = '0xf6905210968fb85ff664a77a92a4751bd5ca2e80';
 
 const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 
-const signer = provider.getSigner();
+const signer = ((window.ethereum != null) ? provider.getSigner() : null);
 
-const contract = new ethers.Contract(contractAddress, TestContract.abi, signer);
+const contract = ((window.ethereum != null) ? new ethers.Contract(contractAddress, TestContract.abi, signer)  : null);
 
 
 
 const mintToken = async (walletAddress, metaData) => {
 
-    if(window.ethereum)
+    if(window.ethereum != null)
     {
         const result = await contract.PayToMint(walletAddress, metaData,
             {
