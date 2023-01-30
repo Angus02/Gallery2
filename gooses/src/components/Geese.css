@@ -356,7 +356,7 @@ video {
 
 .list {
     position: sticky;
-    font-size:x-large;
+    font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
 }
 

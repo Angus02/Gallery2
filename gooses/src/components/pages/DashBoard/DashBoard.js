@@ -28,7 +28,7 @@ function Dash3() {
                 setLoading(false);
             } catch (error) {
                 setLoading(false);
-                console.error(error);
+                // console.error(error);
             }
         }
     };
@@ -51,7 +51,6 @@ function Dash3() {
         {
             setMakeChange(1);
         }
-        console.log(timer);
 
     }, [timer]);
 

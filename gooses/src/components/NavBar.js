@@ -140,10 +140,10 @@ function NavBar()
                   )}</Button>}
                 </p>
 
-                <m>
+                {/* <m>
                   {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' >Menu</Button>}
 
-                </m>
+                </m> */}
             </div>
 
           </li>

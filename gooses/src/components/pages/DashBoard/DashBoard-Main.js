@@ -13,14 +13,14 @@ function DashMain() {
     
     async function URL() {
         const res = await ImageURL();
-        console.log(res);
+        // console.log(res);
 
         setLink(res);
     }
 
     const Check = async () => {
         const result = await checkOwnership();
-        console.log(result);
+        // console.log(result);
     }
 
 
