@@ -7,7 +7,7 @@ import Geese from './components/pages/Geese'
 import Shallow from './components/pages/Shallow'
 import Geesemint from './components/pages/Geesemint';
 import ComingSoon from './components/pages/ComingSoon';
-// import Dash, { DashCheck } from './components/pages/DashBoard/DashBoard';
+import Dash, { DashCheck } from './components/pages/DashBoard/DashBoard';
 // import LogRocket from 'logrocket';
 // import setupLogRocketReact from 'logrocket-react'
 
@@ -21,16 +21,16 @@ function App() {
         <NavBar />
         <Routes>
           <Route path='/' element= {<Home />} />
-          {/* <Route path='/geese' element= {<Geese />} />
+          <Route path='/geese' element= {<Geese />} />
           <Route path='/shallow' element={<Shallow />} />
           <Route path='/geesemint' element={<Geesemint />} />
-          <Route path='/comingsoon' element={<ComingSoon />} /> */}
+          <Route path='/comingsoon' element={<ComingSoon />} />
 
           {/* <Route element={<PrivateRoutes />}>
             <Route path='/dash' element={<DashMain />} />
           </Route> */}
 
-          {/* <Route path='/dash' element={<Dash />}  props={true} /> */}
+          <Route path='/dash' element={<Dash />}  props={true} />
 
           {/* <Route element={<PrivateRoutes />} /> */}
         </Routes>

@@ -253,7 +253,7 @@ const ThreeGraphics = props => {
 
         async function load() {
             const adress = await data();
-            // console.log(adress);
+            console.log(adress);
             num = adress;
 
             
@@ -330,7 +330,7 @@ const ThreeGraphics = props => {
           return (
             <div>
                     <form onSubmit={Upload}>
-                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={this._onButtonClick} type="submit" >Test Button</Button>
+                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={this._onButtonClick} type="submit" >Mint Button</Button>
                         </form>              
                 {this.state.showComponent ?
                  null : null
@@ -359,7 +359,9 @@ const ThreeGraphics = props => {
 
                 ) : ( 
                     <>
-                        <h1> Please Connect Wallet</h1>
+                        <div className='centered'>
+                            <h1> Please Connect Wallet</h1>
+                        </div>
                     </>
                 )}
             </div>
