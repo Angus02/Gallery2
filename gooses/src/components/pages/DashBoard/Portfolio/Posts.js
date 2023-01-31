@@ -9,7 +9,6 @@ const Posts = (props) => {
       <img src={post.image} width="550px" />
       <p>{post.date}</p>
       <p>{post.body}</p>
-
     </div>
   ));
 

@@ -1,7 +1,6 @@
 import { ethers } from "ethers";
 
 // import TestContract from './TestContract2.sol/TestGoose2.json';
-// import TestContract from './TestContract5.sol/The_Gooses_Geese2.json';
 import TestContract from './TestContract3.sol/TestGoose20.json'
 
 
@@ -17,30 +16,25 @@ const contract = ((window.ethereum != null) ? new ethers.Contract(contractAddres
 
 
 
-const mintToken = async (walletAddress, metaData) => {
+const startSeason = async (walletAddress, metaData) => {
 
     if(window.ethereum != null)
     {
-        const result = await contract.PayToMint(walletAddress, metaData,
+
+        const result = await contract.seasonStart(
             {
-                value: ethers.utils.parseEther('0.1')
-            
-            });
-        // const result = await contract.PayToMintRoyalty(walletAddress, metaData,
-        //     {
-        //         value: ethers.utils.parseEther('0.1'),
-        //         gasLimit: 50000000000
-        //     });
-        await result.wait();
+                gasLimit: 50000
+            }
+        );
             // const result = await contract.safeMint(walletAddress, metaData);
 
             // await result.wait();
-        console.log(metaData,  "metadata");
+        console.log(result,  "result");
     }
 };
 
 
-export default mintToken;
+export default startSeason;
 
 
 // Compiled 22 Solidity files successfully

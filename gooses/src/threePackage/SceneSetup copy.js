@@ -18,11 +18,7 @@ import {
 import '../components/Geese.css'
 
 
-const projectId = process.env.REACT_APP_projectId;
-const projectSecretKey = process.env.REACT_APP_projectSecretKey;
-const authorization = "Basic " + btoa(projectId + ":" + projectSecretKey);
-
-
+const authorization = "Basic MkdkVjVOTXM4WU1pT3h6b2RzODhIQTBFYXBsOmRjMzI4ZjQ5M2UyNzAxZjQxMDFiYmUyM2Y2OWNhYzgz";
 
 const ThreeGraphics = props => {
 
@@ -353,7 +349,7 @@ const ThreeGraphics = props => {
                             <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Test Button</Button>
                             </form> */}
 
-                            {/* <MyComponent /> */}
+                            <MyComponent />
                         </div>
                     </>
 

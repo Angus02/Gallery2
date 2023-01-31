@@ -6,7 +6,6 @@ import * as htmlToImage from 'html-to-image'
 import Canvas from '../../utils/ImageCreate'
 import ThreeGraphics from '../../threePackage/SceneSetup copy.js'
 
-
 function Geesemint() {
 
     class MyComponent extends React.Component {

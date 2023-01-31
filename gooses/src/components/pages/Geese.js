@@ -5,11 +5,17 @@ import '../Geese.css'
 import { Button } from '../Button';
 import { getCurrentWalletConnected } from '../../utils/interact';
 import checkOwnership from '../../utils/Ownership';
+// import startSeason from '../../utils/StartSeason';
 
 function Geese() {
 
   const [balance, setBalance] = useState(0);
   const [walletAddress, setWalletAddress] = useState(0);
+
+  // const StartSeason = async (event) => {
+  //   startSeason();
+  // }
+
 
 
   function FlockButton() {
@@ -63,6 +69,11 @@ function Geese() {
             Explore the Flock
           </Button>
         </a> */}
+        {/* <div className='centeredTop'>
+          <Button buttonStyle='btn--outline' onClick={StartSeason()}>
+            Test
+          </Button>
+        </div> */}
 
         <div className='flockBtn'>
           {FlockButton()}

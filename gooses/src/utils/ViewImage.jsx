@@ -1,11 +1,14 @@
 import { ethers } from "ethers";
 import { getCurrentWalletConnected } from "./interact";
 
-import TestContract from './TestContract2.sol/TestGoose2.json';
+// import TestContract from './TestContract2.sol/TestGoose2.json';
+import TestContract from './TestContract3.sol/TestGoose20.json'
+
+
 
 // const contractAddress = '0x5eEa696CDA31FdcCE0D58Ca915E812764048fb79';
 // const contractAddress = '0x8667eA915895bBc1D403B56c7e6f4eAEfdBa3B9b';
-const contractAddress = '0x62c06dcbb8907601c740c57af12e80aada1fa1a7';
+const contractAddress = '0xc35Ea7B5C536d9A379AD583d3b123a60F3e9C46c';
 
 const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 
