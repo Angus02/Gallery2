@@ -8,6 +8,7 @@ import Shallow from './components/pages/Shallow'
 import Geesemint from './components/pages/Geesemint';
 import ComingSoon from './components/pages/ComingSoon';
 import Dash, { DashCheck } from './components/pages/DashBoard/DashBoard';
+import DashBlog from './components/pages/DashBoard/DashBoard-Blog/Blog';
 // import LogRocket from 'logrocket';
 // import setupLogRocketReact from 'logrocket-react'
 
@@ -31,6 +32,7 @@ function App() {
           </Route> */}
 
           <Route path='/dash' element={<Dash />}  props={true} />
+
 
           {/* <Route element={<PrivateRoutes />} /> */}
         </Routes>

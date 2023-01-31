@@ -5,8 +5,10 @@ import '../../Shallow.css'
 import checkOwnership from '../../../utils/Ownership';
 import { re } from 'mathjs';
 import ImageURL from '../../../utils/ViewImage';
+import DashBlog from './DashBoard-Blog/Blog';
 
-function DashMain() {
+
+function DashMain(IMGSize) {
 
     const [wallet, setWallet] = useState(null);
     const [Link, setLink] = useState(null);
@@ -18,12 +20,6 @@ function DashMain() {
         setLink(res);
     }
 
-    const Check = async () => {
-        const result = await checkOwnership();
-        // console.log(result);
-    }
-
-
     useEffect(() => { //TODO: implement
 
         async function fetchData() {
@@ -34,25 +30,14 @@ function DashMain() {
         fetchData();
         URL();
     }, []);
+    
 
 
   return (
     <>
-        <div className='fillBlack'>
-        
-            <div className='container'>
 
-                <div className='containerBlackFill'>
-                    <div className='centered'>
-                        <Button buttonStyle='btn--outline' buttonSize='btn--medium' >
-                            Load Dashboard
-                        </Button>
-                        <div>
-                            <img src={Link} alt="error" width='500px'></img>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <img src={Link} alt="Goose" width="400px" ></img>
         </div>
   </>
   );

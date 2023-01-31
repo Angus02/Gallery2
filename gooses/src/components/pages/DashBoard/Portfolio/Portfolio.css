@@ -1,0 +1,14 @@
+.PostContainerPort {
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 3em;
+  }
+
+.PostPort{
+    border: 1px black;
+    width: 30em;
+}
+
+.RecentrePort {
+    margin-top: 20vh;
+}

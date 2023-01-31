@@ -16,6 +16,8 @@ video {
 
 .fill {
     margin-top: 85px;
+    color: black;
+    width: 100%;
 }
 
 .container {
@@ -26,9 +28,11 @@ video {
 }
 
 .containerGeese {
+    overflow: auto;
     position: relative;
     color: black;
     background-color: black;
+    width: 100%;
 }
 
 .whiteBar {
@@ -55,9 +59,11 @@ video {
 }
 
 .containerBlackFill {
+    overflow: auto;
     text-align: centre;
     color: black;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
 .containerBlackMint {
@@ -78,6 +84,25 @@ video {
     width: 100%;
 }
 
+.dashImgLeft
+{
+    transform: translate(-50%,0%);
+}
+
+.dashBtnLeft
+{
+    transform: translate(32.5%, 0%);
+}
+
+.dashLeft {
+    top: 50%;
+    left: 100wh;
+}
+
+.dashRight {
+    top: 50%;
+    left: 500wh;
+}
 
 .centeredIMG {
     position: absolute;
@@ -91,6 +116,12 @@ video {
     text-align: center;
     vertical-align: middle;
 }
+
+.PortfolioBack{
+    color: black;
+    height: 300%;
+}
+
 
 .centered {
     position: absolute;
@@ -133,7 +164,7 @@ video {
     color: white;
     font-size: 10vh;
     font-family:'Times New Roman', Times, serif;
-    z-index: 10;
+    z-index: 50;
 }
 
 @media screen and (min-width: 100px) {
@@ -298,7 +329,7 @@ video {
 .centreRight {
     position:absolute;
     top: 10vh;
-    right: 10vh;
+    right: 20%;
     width: 30%;
     color: white;
 }
@@ -306,10 +337,15 @@ video {
 .centreLeft {
     position:absolute;
     top: 10vh;
-    left: 10vh;
+    left: 20%;
     width: 30%;
 
     color: white;
+}
+
+.dashIMGTrans {
+    position:absolute;
+    transform: translate(-36%,0%);
 }
 
 .middleLeftText {

@@ -3,7 +3,7 @@ import { Navigate, useLoaderData } from "react-router-dom";
 import checkOwnership from "../../../utils/Ownership";
 import { Button } from "../../Button";
 import Geese from "../Geese";
-import DashMain from "./DashBoard-Main"
+import DashMain from "./DashBoard-Main2"
 import DashLoading from "./DashBoard-Loading";
 
 
@@ -66,9 +66,11 @@ function Dash3() {
 
     return(
         <>
-            {makeChange == 1 ? <Navigate to={'/geese'} /> : change() }            
+            {/* {makeChange == 1 ? <Navigate to={'/geese'} /> : change() }             */}
+       
+            <DashMain />
         </>
-    )
+    )   
 }
 
 export default Dash3;

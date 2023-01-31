@@ -1,0 +1,14 @@
+.PostContainer {
+    padding-left: 3em;
+    padding-right: 3em;
+    margin-top: 3em;
+  }
+
+.Post{
+    border: 1px black;
+    width: 30em;
+}
+
+.Recentre {
+    margin-top: 70vh;
+}
