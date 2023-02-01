@@ -349,7 +349,7 @@ const ThreeGraphics = props => {
                             <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Test Button</Button>
                             </form> */}
 
-                            <MyComponent />
+                            {/* <MyComponent /> */}
                         </div>
                     </>
 

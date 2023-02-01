@@ -214,9 +214,12 @@ video {
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 680px) {
 
     .mintBtn {
+        display: none;
+    }
+    .flockBtn {
         display: none;
     }
 }
@@ -429,7 +432,7 @@ video {
 
 .flockBtn {
     position: absolute;
-    margin-left: 80%;
+    margin-left: 75%;
     margin-top: 5%;
     color: white;
 }
