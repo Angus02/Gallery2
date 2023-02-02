@@ -15,6 +15,8 @@ function Dash3() {
     const [check, setCheck] = useState(0);
     const [makeChange, setMakeChange] = useState(0);
 
+    let x = 1;
+
     const getData = async () => {
 
         if(Loading == false)
@@ -33,26 +35,37 @@ function Dash3() {
         }
     };
 
-    useEffect(() => { //TODO: implement
+    const Check = () => {
 
-        getData();
+        if(x < 100)
+        {
+            x = x + 1;
+        }
+        // console.log(x);
+
 
         if(Owner == true)
         {
             setCheck(1);
         }
 
-        if(timer < 1200)
-        {
-            setTimer(timer + 1);
-        }
-
-        if(timer > 1000 && check == 0 )
+        if(x > 100 && check == 0 )
         {
             setMakeChange(1);
         }
+    }
 
-    }, [timer]);
+    async function run() {
+        setInterval(Check, 1000);
+    }
+
+    useEffect(() => { //TODO: implement
+
+        getData();
+
+        run();
+
+    }, []);
 
     function change() {
 
