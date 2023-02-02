@@ -66,9 +66,9 @@ function Dash3() {
 
     return(
         <>
-            {/* {makeChange == 1 ? <Navigate to={'/geese'} /> : change() }             */}
+            {makeChange == 1 ? <Navigate to={'/geese'} /> : change() }            
        
-            <DashMain />
+            {/* <DashMain /> */}
         </>
     )   
 }
