@@ -1,6 +1,6 @@
 
 let metadata = {
-    "name": "GoosesTest-27/01--1",
+    "name": "GoosesTest-royalty--2",
     "description": "The Birth of the Flock",
     "image": "image",
     "attributes": ["Today's beak is orange"]

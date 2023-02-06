@@ -27,6 +27,8 @@ const ThreeGraphics = props => {
     const [walletAddress, setWallet] = useState("");
     const [buff, setBuff] = useState("");
     const [images, setImages] = useState([])
+    const [loaded, setLoaded] = useState(0)
+
 
 
     const ipfs = ipfsHttpClient({
@@ -238,8 +240,8 @@ const ThreeGraphics = props => {
 
             // console.log(result.path);
             setBuff(buffer);
+            setLoaded(1);
         }, 5000);
-
     }
 
 
@@ -287,7 +289,7 @@ const ThreeGraphics = props => {
                     const tokenURI = Infura_HTTPS + secondResult.path;
                     console.log("congratulations on your purchase, ipfs at: ", tokenURI);
 
-                    mintToken(walletAddress, tokenURI);
+                    // mintToken(walletAddress, tokenURI);
                 }
 
 
@@ -344,10 +346,6 @@ const ThreeGraphics = props => {
                 {walletAddress !== "" ? (
                     <>
                         <div className='mintBtn2'>
-
-                            {/* <form onSubmit={Upload}>
-                            <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Test Button</Button>
-                            </form> */}
 
                             {/* <MyComponent /> */}
                         </div>

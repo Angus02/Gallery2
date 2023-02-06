@@ -1,19 +1,22 @@
 ul {
-    position: fixed;
-    top: 0px;
-    width: 100%;
+  position: fixed;
+  top: 0px;
+  width: 100%;
 
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    background-color: #333;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
 
-    z-index: 500;
+  z-index: 500;
 }
 
 .spacer {
-padding: 27.5px 16px;
+  margin-top: 27.5px;
+  margin-right: 25px;
+  margin-left: 25px;
+/* padding: 27.5px 16px; */
 }
 
 li {
@@ -25,7 +28,7 @@ li p {
   color: white;
   text-align: center;
   text-decoration: none;
-  margin-top: 60%;
+  /* margin-top: 60%; */
 }
 
 li p:hover:not(.active) {
@@ -48,7 +51,7 @@ li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 35px 16px;
+  padding: 35px 26px;
   text-decoration: none;
 }
 
@@ -81,7 +84,7 @@ lir a:hover:not(.active) {
 
 
 
-@media (max-width: 503px) {
+@media (max-width: 510px) {
 
   li a {
       display: none;

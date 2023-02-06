@@ -42,7 +42,7 @@ function Geesemint() {
 
                 <div className='containerGeese'>
                 
-                    <div className='containerBlackMint'>
+                    <div className='containerBlackFill'>
                         <div className='centered' >
                             <MyComponent />
                         </div>

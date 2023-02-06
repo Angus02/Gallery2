@@ -119,15 +119,15 @@ function NavBar()
       <>
         <ul >
 
-        <lir>
-          <a href="/" className="navbar-logo2" >
-            <img className="navbar-logo2" src='media/images/Gallery-Goose-Logo.png' width={80}/>
-          </a>
-        </lir>
+          <lir>
+            <a href="/"  >
+              <img src='media/images/Gallery-Goose-Logo.png' width={80}/>
+            </a>
+          </lir>
 
 
           <li>
-            <div className='spacer' id="myTopNav">
+            <div className='spacer' >
               <p>
                 {button && <Button buttonStyle='btn--outline' buttonSize='btn--medium' onClick={connectWalletPressed}>
                   {walletAddress.length > 0 ? (
