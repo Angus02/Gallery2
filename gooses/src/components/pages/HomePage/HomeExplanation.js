@@ -93,11 +93,13 @@ function Explanation() {
                     </div>
 
                     <div className='centreRightText'>
-                        <p> Goose 1 </p>    
+                        <p> Goose 1 </p>
+                        <p className='centreRightTextP'>Specialises in conception and aesthetic. Controls digital production, what you read and where you read it. Loves a Podcast. Media of the highest level runs through his veins.</p>
                     </div>
 
                     <div className='centreLeftText'>
                         <p> Goose 2 </p>    
+                        <p className='centreLeftTextP'>Goose. A techinal Artist at heart. The lead developer and responsible for making everything run smoothly. A passionate 3D artist and enjoy the process of creating media of any form.</p>
                     </div>
 
                 </div>

@@ -98,7 +98,7 @@ function Geese() {
           <img className='backImg' src='media/images/GooseLeftCentre.png'  />
           <div className='centeredTop' >Why Purchase?</div>
           <div className='middleLeftText'>
-            <p>blajshdhdhd</p>
+            <p>The Geese project is our first step to creating a brand which makes use of modern techonology. Your contribution to the brand will drive development. In doing so you will be rewarded as the brand grows. </p>
           </div>
       </div>
 

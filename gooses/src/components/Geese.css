@@ -77,7 +77,7 @@ video {
 .containerGreyFill {
     text-align: centre;
     color: darkgray;
-    height: 80vh;
+    height: 75vh;
 }
 
 .backImg {
@@ -171,9 +171,9 @@ video {
 
 @media screen and (min-width: 100px) {
 
-    .containerGreyFill {
+    /* .containerGreyFill {
         height: 50vh;
-    }
+    } */
 
     .textSpacer {
         height: 10vh;
@@ -187,7 +187,7 @@ video {
 
     .centeredTopW {
         /* font-size: calc(16px + 6 * ((100vw - 320px) / 680)); */
-        font-size: 36px;
+        font-size: 26px;
     }
 
     .centeredBottom {
@@ -229,9 +229,9 @@ video {
 
 @media screen and (min-width: 1000px) {
 
-    /* .containerGreyFill {
-        height: 80vh;
-    } */
+    .containerGreyFill {
+        height: 120vh;
+    }
 /* 
     .containerBlackFill {
         height: 100vh;
@@ -247,7 +247,7 @@ video {
     }
 
     .centeredTopW {
-        font-size: 32px;
+        font-size: 52px;
     }
 
     .centeredBottom {
@@ -275,7 +275,7 @@ video {
 @media screen and (min-width: 3000px) {
 
     .containerGreyFill {
-        height: 80vh;
+        height: 180vh;
     }
 
     .containerBlackFill {
@@ -292,7 +292,7 @@ video {
     }
 
     .centeredTopW {
-        font-size: 32px;
+        font-size: 102px;
     }
 
     .centeredBottom {
@@ -377,7 +377,18 @@ video {
 .centreRightText {
     position: absolute;
     top: 35%;
-    left: 20%;
+    left: 10%;
+    width: 30%;
+    color: black;
+    font-size: 3vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+.centreRightTextP {
+    position: absolute;
+    top: 250%;
+    left: 10%;
     color: black;
     font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
@@ -387,7 +398,18 @@ video {
 .centreLeftText {
     position: absolute;
     top: 35%;
-    right: 20%;
+    left: 60%;
+    width: 30%;
+    color: black;
+    font-size: 3vw;
+    font-family:'Times New Roman', Times, serif;
+    z-index: 10;
+}
+
+.centreLeftTextP {
+    position: absolute;
+    top: 250%;
+    left: 10%;
     color: black;
     font-size: 2vw;
     font-family:'Times New Roman', Times, serif;
@@ -401,8 +423,10 @@ video {
 }
 
 .fillGrey {
+    /* overflow: auto; */
     background-color: #D5D3D5;
-    width: 100%;
+    /* width: 100%; */
+    /* height: 200%; */
 }
 
 .fillBlack {
