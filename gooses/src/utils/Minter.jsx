@@ -2,12 +2,12 @@ import { ethers } from "ethers";
 
 // import TestContract from './TestContract2.sol/TestGoose2.json';
 // import TestContract from './TestContract5.sol/The_Gooses_Geese2.json';
-import TestContract from './TestContract3.sol/TestGoose20.json'
+import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Final_Test.json'
 
 
 // const contractAddress = '0x5eEa696CDA31FdcCE0D58Ca915E812764048fb79';
 // const contractAddress = '0x8667eA915895bBc1D403B56c7e6f4eAEfdBa3B9b';
-const contractAddress = '0xc35Ea7B5C536d9A379AD583d3b123a60F3e9C46c';
+const contractAddress = '0xe75ff35dae9379d3cadcc4e00ddb491a81e7497e';
 
 const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 

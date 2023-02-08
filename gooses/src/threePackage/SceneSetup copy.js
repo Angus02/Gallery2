@@ -289,7 +289,7 @@ const ThreeGraphics = props => {
                     const tokenURI = Infura_HTTPS + secondResult.path;
                     console.log("congratulations on your purchase, ipfs at: ", tokenURI);
 
-                    // mintToken(walletAddress, tokenURI);
+                    mintToken(walletAddress, tokenURI);
                 }
 
 
@@ -326,12 +326,25 @@ const ThreeGraphics = props => {
       
         render() {
           return (
-            <div>
+            <div>    
+                {this.state.showComponent ?
+                (
+                    null
+                ) 
+                : 
+                (
+                    <>
+                    {loaded != 0 ? (
                     <form onSubmit={Upload}>
                         <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={this._onButtonClick} type="submit" >Mint Button</Button>
-                        </form>              
-                {this.state.showComponent ?
-                 null : null
+                    </form> 
+                    )
+                    :
+                    (
+                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  type="submit" >Please Wait</Button>
+                    )}
+                    </>
+                )
               }
             </div>
           );
@@ -347,7 +360,7 @@ const ThreeGraphics = props => {
                     <>
                         <div className='mintBtn2'>
 
-                            {/* <MyComponent /> */}
+                            <MyComponent />
                         </div>
                     </>
 
