@@ -6,7 +6,7 @@ import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Final_T
 
 // const contractAddress = '0x5eEa696CDA31FdcCE0D58Ca915E812764048fb79';
 // const contractAddress = '0x8667eA915895bBc1D403B56c7e6f4eAEfdBa3B9b';
-const contractAddress = '0xe75ff35dae9379d3cadcc4e00ddb491a81e7497e';
+const contractAddress = '0xdb96f133d3b7fd44f360722256a9709cd0bc5644';
 
 const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 
