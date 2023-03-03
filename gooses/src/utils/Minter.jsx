@@ -2,8 +2,8 @@ import { ethers } from "ethers";
 
 // import TestContract from './TestContract2.sol/TestGoose2.json';
 // import TestContract from './TestContract5.sol/The_Gooses_Geese2.json';
-import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Final_Test.json'
-
+// import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Final_Test.json'
+import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Memberships.json'
 
 // const contractAddress = '0x5eEa696CDA31FdcCE0D58Ca915E812764048fb79';
 // const contractAddress = '0x8667eA915895bBc1D403B56c7e6f4eAEfdBa3B9b';

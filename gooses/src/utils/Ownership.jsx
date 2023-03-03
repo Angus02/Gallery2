@@ -2,7 +2,7 @@ import { ethers } from "ethers";
 import { getCurrentWalletConnected } from "./interact";
 
 // import TestContract from './TestContract2.sol/TestGoose2.json';
-import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Final_Test.json'
+import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Memberships.json'
 
 
 
