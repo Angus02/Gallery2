@@ -263,7 +263,7 @@ const ThreeGraphics = props => {
 
     const Upload = async (event) => {
 
-        const Infura_HTTPS = "https://gooses-members.infura-ipfs.io/ipfs/";
+        const Infura_HTTPS = "https://gooses-gallery-members-season-one.infura-ipfs.io/ipfs/";
 
 
         setTimeout(async function() {
