@@ -10,6 +10,18 @@
 }
 
 .Recentre {
-    margin-top: 100%;
+    translate: 0% 50%;
     margin-bottom: 30%;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+h3 {
+    font-size:x-large;
+}
+
+p {
+    font-size: large;
 }

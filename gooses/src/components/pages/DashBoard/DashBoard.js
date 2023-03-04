@@ -8,8 +8,8 @@ import DashLoading from "./DashBoard-Loading";
 
 
 function Dash3() {
-    const [Loading, setLoading] = useState(false);
-    const [Owner, setOwner] = useState(false);
+    const [Loading, setLoading] = useState(true);
+    const [Owner, setOwner] = useState(true);
 
     const [timer, setTimer] = useState(0);
     const [check, setCheck] = useState(0);
