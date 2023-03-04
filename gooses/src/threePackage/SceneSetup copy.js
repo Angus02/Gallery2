@@ -331,7 +331,7 @@ const ThreeGraphics = props => {
                 (
                     <>
                     {loaded != 0 ? ( //null
-                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={Upload} type="submit" >Mint for 0.1 eth</Button>
+                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={Upload} type="submit" >Mint for 0.01 eth</Button>
                     )
                     :
                     (
