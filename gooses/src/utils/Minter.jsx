@@ -3,17 +3,17 @@ import { ethers } from "ethers";
 // import TestContract from './TestContract2.sol/TestGoose2.json';
 // import TestContract from './TestContract5.sol/The_Gooses_Geese2.json';
 // import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Final_Test.json'
-import TestContract from './Goose_Membership(final).sol/The_Gooses_Geese_Memberships.json'
+import TestContract from './Goose_Membership(final)Live.sol/The_Gooses_Geese_Memberships.json'
 
 // const contractAddress = '0x5eEa696CDA31FdcCE0D58Ca915E812764048fb79';
 // const contractAddress = '0x8667eA915895bBc1D403B56c7e6f4eAEfdBa3B9b';
-const contractAddress = '0xdb96f133d3b7fd44f360722256a9709cd0bc5644';
+const contractAddress = '0xad1721a74e6f87ed247a447b09ea4ee980b348d5';
 
 const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum) : ethers.providers.getDefaultProvider());
 
 const signer = ((window.ethereum != null) ? provider.getSigner() : null);
 
-const contract = ((window.ethereum != null) ? new ethers.Contract(contractAddress, TestContract.abi, signer)  : null);
+const contract = ((window.ethereum != null) ? new ethers.Contract(contractAddress, TestContract, signer)  : null);
 
 
 

@@ -17,8 +17,7 @@ import {
 
 import '../components/Geese.css'
 
-
-const authorization = "Basic MkdkVjVOTXM4WU1pT3h6b2RzODhIQTBFYXBsOmRjMzI4ZjQ5M2UyNzAxZjQxMDFiYmUyM2Y2OWNhYzgz";
+const authorization = "Basic Mk1ZcTJlZGdPbGZ3ZjQxY2Z2dkdmd1MxQldDOjYzNDYwNTdlNWIwZTQyZWQ1MjY3NmMxNWFjMjgyOGJj";
 
 const ThreeGraphics = props => {
 
@@ -52,8 +51,6 @@ const ThreeGraphics = props => {
         // console.log(add);
         return add;
     }
-
-
 
     const Draw = (ctx, addr) => {
 
@@ -250,16 +247,15 @@ const ThreeGraphics = props => {
         let num = [];
 
         async function load() {
-            const adress = await data();
+            const adress = await data(); 
             console.log(adress);
             num = adress;
 
             
             Draw("myScene", num);
-
             // console.log(authorization, "authorization");
         }
-        load();        
+        load(); 
         
         // convert(ctx);
     }, []);
@@ -287,7 +283,7 @@ const ThreeGraphics = props => {
                 if(secondResult)
                 {
                     const tokenURI = Infura_HTTPS + secondResult.path;
-                    console.log("congratulations on your purchase, ipfs at: ", tokenURI);
+                    // console.log("congratulations on your purchase, ipfs at: ", tokenURI);
 
                     mintToken(walletAddress, tokenURI);
                 }
@@ -334,8 +330,8 @@ const ThreeGraphics = props => {
                 : 
                 (
                     <>
-                    {loaded != 0 ? ( null
-                        // <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={Upload} type="submit" >Mint Button</Button>
+                    {loaded != 0 ? ( //null
+                        <Button buttonStyle='btn--outline' buttonSize='btn--large'  onClick={Upload} type="submit" >Mint for 0.1 eth</Button>
                     )
                     :
                     (
