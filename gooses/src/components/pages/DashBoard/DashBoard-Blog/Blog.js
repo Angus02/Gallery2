@@ -20,9 +20,9 @@ const DashBlog = () => {
     <div className='Background'>
       <div className='centered'>
         <div>
-                        <div className="Recentre">
-                          <Posts posts={Blog} select={selectPost}/>
-                        </div>
+          <div className="Recentre">
+            <Posts posts={Blog} select={selectPost}/>
+          </div>
         </div>
       </div>
     </div>
